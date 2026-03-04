@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <style>
     /* ─── TOKENS ─────────────────────────────────────── */
     :root {
@@ -1169,40 +1170,6 @@
     }
 
     /* ─── INTEGRATIONS STRIP ──────────────────────────── */
-    .integrations {
-      padding: 100px 32px;
-    }
-
-    .int-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .int-chip {
-      background: var(--bg-white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 16px 12px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-2);
-      transition: border-color .2s, box-shadow .2s;
-    }
-
-    .int-chip:hover {
-      border-color: rgba(99, 102, 241, .35);
-      box-shadow: 0 4px 16px rgba(99, 102, 241, .1);
-    }
-
-    .int-chip span {
-      font-size: 24px;
-    }
 
     /* ─── CTA ─────────────────────────────────────────── */
     .cta-section {
@@ -1390,9 +1357,6 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .int-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
 
       .footer-grid {
         grid-template-columns: 1fr 1fr;
@@ -1504,7 +1468,6 @@
       .how,
       .about,
       .industries,
-      .integrations,
       .usecases {
         padding: 72px 24px;
       }
@@ -1591,7 +1554,6 @@
       .how,
       .about,
       .industries,
-      .integrations,
       .usecases {
         padding: 56px 16px;
       }
@@ -1706,19 +1668,6 @@
         font-size: 14px;
       }
 
-      .int-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-      }
-
-      .int-chip {
-        padding: 14px 8px;
-        font-size: 11px;
-      }
-
-      .int-chip span {
-        font-size: 20px;
-      }
 
       .cta-box {
         padding: 44px 24px;
@@ -1783,9 +1732,6 @@
 
     /* Very small phones */
     @media (max-width: 380px) {
-      .int-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
 
       .logos-row {
         gap: 12px;
@@ -1925,31 +1871,6 @@
   <div class="logos-bar">
     <div class="container">
       <p class="logos-label">AI-Native — Powered by the world's leading models &amp; frameworks</p>
-      <div class="logos-row">
-        <div class="logo-pill">
-          <div class="lp-icon" style="background:#e8f0ff;font-size:13px;font-weight:900;color:#10a37f;">G</div> GPT-4o
-        </div>
-        <div class="logo-pill">
-          <div class="lp-icon" style="background:#f5e8ff;font-size:13px;font-weight:900;color:#6b4fbb;">C</div> Claude
-        </div>
-        <div class="logo-pill">
-          <div class="lp-icon" style="background:#e8f4ff;font-size:13px;font-weight:900;color:#4285f4;">G</div> Gemini
-        </div>
-        <div class="logo-pill">
-          <div class="lp-icon" style="background:#fff3e8;font-size:11px;font-weight:900;color:#0467df;">🦙</div> LLaMA
-        </div>
-        <div class="logo-pill">
-          <div class="lp-icon" style="background:#e8fff4;font-size:11px;font-weight:900;color:#1c7c54;">⛓</div>
-          LangChain
-        </div>
-        <div class="logo-pill">
-          <div class="lp-icon" style="background:#e8f0ff;font-size:11px;font-weight:900;color:#0078d4;">Az</div> Azure
-          AI
-        </div>
-        <div class="logo-pill">
-          <div class="lp-icon" style="background:#fff0f5;font-size:11px;font-weight:900;color:#ff4f00;">n8n</div> n8n
-        </div>
-      </div>
     </div>
   </div>
 
@@ -1967,30 +1888,30 @@
         <div class="svc-card reveal">
           <div class="svc-icon" style="background:var(--purple-soft)">🔄</div>
           <h3>AI Workflow Automation</h3>
-          <p>Design and deploy multi-step workflows that run autonomously. Connect any tool, trigger any action,
+          <p>We can design and deploy multi-step workflows that run autonomously. Connect any tool, trigger any action,
             automate any process—visually or in plain English.</p>
-          <a href="#cta" class="svc-link">Learn more →</a>
+          <a href="#cta" class="svc-link">Just ASK.. →</a>
         </div>
         <div class="svc-card reveal">
           <div class="svc-icon" style="background:var(--blue-soft)">📄</div>
           <h3>Intelligent Document Processing</h3>
-          <p>Extract data from invoices, contracts, and forms with AI. Classify, validate, and route documents
+          <p>We can design AI solutions that extract data from invoices, contracts, and forms. Classify, validate, and route documents
             automatically—zero manual data entry required.</p>
-          <a href="#cta" class="svc-link">Learn more →</a>
+          <a href="#cta" class="svc-link">Just ASK.. →</a>
         </div>
         <div class="svc-card reveal">
           <div class="svc-icon" style="background:var(--green-soft)">💬</div>
           <h3>AI Chatbots &amp; Assistants</h3>
           <p>Build powerful conversational AI trained on your knowledge base. Handle customer queries, qualify leads,
             and support internal teams around the clock.</p>
-          <a href="#cta" class="svc-link">Learn more →</a>
+          <a href="#cta" class="svc-link">Just ASK.. →</a>
         </div>
         <div class="svc-card reveal">
           <div class="svc-icon" style="background:var(--yellow-soft)">📊</div>
           <h3>Data Analytics &amp; Insights</h3>
           <p>Turn raw data into clear decisions. Real-time dashboards, predictive models, and automated reports
             delivered directly to your team's inbox.</p>
-          <a href="#cta" class="svc-link">Learn more →</a>
+          <a href="#cta" class="svc-link">Just ASK.. →</a>
         </div>
 
         <div class="svc-card reveal">
@@ -1998,7 +1919,7 @@
           <h3>Digital Transformation</h3>
           <p>End-to-end consulting and implementation to modernize your business—from legacy systems to cloud-native AI
             infrastructure built for scale.</p>
-          <a href="#cta" class="svc-link">Learn more →</a>
+          <a href="#cta" class="svc-link">Just ASK.. →</a>
         </div>
       </div>
     </div>
@@ -2057,8 +1978,8 @@
         <div class="why-cell">
           <div class="why-ico" style="background:var(--purple-soft)">🧬</div>
           <h3>AI-Native from Day One</h3>
-          <p>We don't bolt AI onto old systems. Every solution we build starts with AI at the core — purpose-built for
-            intelligent automation.</p>
+          <p>From the day you engage us, no matter your legacy stack, we will bolt AI frameworks that can automate your
+            processes and transform your operations — purpose-built for intelligent automation.</p>
         </div>
         <div class="why-cell">
           <div class="why-ico" style="background:var(--green-soft)">💬</div>
@@ -2355,34 +2276,6 @@
     </div>
   </section>
 
-  <!-- ═══ INTEGRATIONS ════════════════════════════════════ -->
-  <section class="integrations" id="integrations">
-    <div class="container">
-      <div class="section-header reveal"
-        style="text-align:center; display:flex; flex-direction:column; align-items:center;">
-        <div class="section-tag">Integrations</div>
-        <h2 class="section-title">Works with your stack,<br>out of the box</h2>
-        <p class="section-sub" style="text-align:center; max-width:460px;">200+ native integrations so JSK AI fits
-          seamlessly into your existing tools—no custom code needed.</p>
-      </div>
-
-      <div class="int-grid reveal">
-        <div class="int-chip"><span>☁️</span>Salesforce</div>
-        <div class="int-chip"><span>📊</span>SAP</div>
-        <div class="int-chip"><span>📧</span>Microsoft 365</div>
-        <div class="int-chip"><span>🔍</span>Google Workspace</div>
-        <div class="int-chip"><span>💼</span>QuickBooks</div>
-        <div class="int-chip"><span>🎯</span>HubSpot</div>
-        <div class="int-chip"><span>🗄️</span>Snowflake</div>
-        <div class="int-chip"><span>🔔</span>Slack</div>
-        <div class="int-chip"><span>📋</span>Jira</div>
-        <div class="int-chip"><span>🌐</span>Shopify</div>
-        <div class="int-chip"><span>🏦</span>Stripe</div>
-        <div class="int-chip"><span>+ 188 more</span></div>
-      </div>
-    </div>
-  </section>
-
   <!-- ═══ CTA ══════════════════════════════════════════════ -->
   <section class="cta-section" id="cta">
     <div class="cta-box reveal">
@@ -2392,7 +2285,7 @@
         side.</p>
       <div class="cta-btns">
         <a href="mailto:hello@jskai.in" class="btn btn-green btn-lg">Start for Free →</a>
-        <a href="tel:+911234567890" class="btn btn-ghost-white btn-lg">Schedule a Demo</a>
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jskai'});return false;" class="btn btn-ghost-white btn-lg">Schedule a Demo</a>
       </div>
     </div>
   </section>
@@ -2442,7 +2335,6 @@
           <ul class="footer-links">
             <li><a href="#">Documentation</a></li>
             <li><a href="#">API Reference</a></li>
-            <li><a href="#">Integrations</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
           </ul>
@@ -2511,6 +2403,7 @@
       });
     });
   </script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 
 </html>
