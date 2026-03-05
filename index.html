@@ -813,97 +813,6 @@
       line-height: 1.65;
     }
 
-    /* ─── USE CASES ──────────────────────────────────── */
-    .usecases {
-      padding: 100px 32px;
-    }
-
-    .uc-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .uc-card {
-      background: var(--bg-white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      transition: transform .25s, box-shadow .25s;
-    }
-
-    .uc-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .uc-banner {
-      height: 8px;
-    }
-
-    .uc-body {
-      padding: 28px 28px 32px;
-    }
-
-    .uc-badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      padding: 4px 10px;
-      border-radius: 5px;
-      margin-bottom: 16px;
-    }
-
-    .uc-card h3 {
-      font-size: 18px;
-      font-weight: 800;
-      margin-bottom: 12px;
-      letter-spacing: -.3px;
-      line-height: 1.3;
-    }
-
-    .uc-card p {
-      font-size: 13.5px;
-      color: var(--text-2);
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .uc-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .uc-tag {
-      font-size: 11px;
-      font-weight: 600;
-      padding: 5px 10px;
-      border-radius: 6px;
-      background: var(--bg);
-      color: var(--text-2);
-      border: 1px solid var(--border);
-    }
-
-    .uc-status {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 18px;
-      padding-top: 18px;
-      border-top: 1px solid var(--border);
-      font-size: 12.5px;
-      font-weight: 600;
-    }
-
-    .uc-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--green);
-    }
 
     /* ─── INDUSTRIES ──────────────────────────────────── */
     .industries {
@@ -953,6 +862,170 @@
       font-size: 13px;
       color: var(--text-2);
       line-height: 1.55;
+    }
+
+    /* ─── PORTFOLIO ──────────────────────────────────── */
+    .portfolio {
+      padding: 100px 32px;
+      background: var(--bg-white);
+      border-top: 1px solid var(--border);
+    }
+
+    .pf-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .pf-filter-btn {
+      padding: 7px 18px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: all .2s;
+    }
+
+    .pf-filter-btn:hover {
+      border-color: var(--purple);
+      color: var(--purple);
+    }
+
+    .pf-filter-btn.active {
+      background: var(--purple);
+      border-color: var(--purple);
+      color: #fff;
+    }
+
+    .pf-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .pf-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .pf-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .pf-card.hidden-card {
+      display: none;
+    }
+
+    .pf-banner {
+      height: 6px;
+    }
+
+    .pf-body {
+      padding: 24px 24px 28px;
+    }
+
+    .pf-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .pf-badge {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 5px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .pf-card h3 {
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -.3px;
+      line-height: 1.3;
+    }
+
+    .pf-card p.pf-desc {
+      font-size: 13px;
+      color: var(--text-2);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .pf-features {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    .pf-features li {
+      font-size: 12.5px;
+      color: var(--text-2);
+      line-height: 1.5;
+      padding: 3px 0;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .pf-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    .pf-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 16px;
+    }
+
+    .pf-tag {
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 4px 9px;
+      border-radius: 5px;
+      background: var(--bg-white);
+      color: var(--text-2);
+      border: 1px solid var(--border);
+    }
+
+    .pf-status {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .pf-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+
+    .pf-cta-row {
+      text-align: center;
+      margin-top: 48px;
     }
 
     /* ─── FAQ ─────────────────────────────────────────── */
@@ -1362,6 +1435,8 @@
         grid-template-columns: 1fr 1fr;
         gap: 36px;
       }
+
+      .pf-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     /* Tablet portrait */
@@ -1428,9 +1503,6 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .uc-grid {
-        grid-template-columns: 1fr 1fr;
-      }
 
       .ind-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1467,8 +1539,7 @@
       .services,
       .how,
       .about,
-      .industries,
-      .usecases {
+      .industries {
         padding: 72px 24px;
       }
 
@@ -1553,8 +1624,7 @@
       .services,
       .how,
       .about,
-      .industries,
-      .usecases {
+      .industries {
         padding: 56px 16px;
       }
 
@@ -1610,15 +1680,13 @@
         padding: 30px 24px;
       }
 
-      .uc-grid {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
 
       .ind-grid {
         grid-template-columns: 1fr;
         gap: 12px;
       }
+
+      .pf-grid { grid-template-columns: 1fr; gap: 14px; }
 
       .ind-card {
         padding: 20px;
@@ -1764,6 +1832,7 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#how">How It Works</a></li>
       <li><a href="#industries">Industries</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#why">Why Us</a></li>
       <li><a href="#about">About Us</a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -1784,6 +1853,7 @@
     <a href="#services" class="mobile-nav-link">Services</a>
     <a href="#how" class="mobile-nav-link">How It Works</a>
     <a href="#industries" class="mobile-nav-link">Industries</a>
+    <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
     <a href="#why" class="mobile-nav-link">Why Us</a>
     <a href="#about" class="mobile-nav-link">About Us</a>
     <a href="#faq" class="mobile-nav-link">FAQ</a>
@@ -2003,89 +2073,6 @@
     </div>
   </section>
 
-  <!-- ═══ USE CASES ══════════════════════════════════════ -->
-  <section class="usecases" id="usecases">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-tag">Use Cases</div>
-        <h2 class="section-title">Real solutions we've built</h2>
-        <p class="section-sub">See how JSK AI solves real business problems — from financial markets to religious
-          scholarship to international trade.</p>
-      </div>
-
-      <div class="uc-grid">
-        <!-- Use Case 1: Trading -->
-        <div class="uc-card reveal">
-          <div class="uc-banner" style="background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div>
-          <div class="uc-body">
-            <span class="uc-badge" style="background:var(--purple-soft);color:var(--purple);">Finance</span>
-            <h3>AI-Powered Trading Opportunity Scanner</h3>
-            <p>An automated system for retail investors that continuously scans markets, analyzes technical and
-              fundamental signals, and surfaces high-probability trading opportunities in real-time — eliminating hours
-              of manual chart-watching and research.</p>
-            <div class="uc-tags">
-              <span class="uc-tag">Market Data APIs</span>
-              <span class="uc-tag">AI Signal Detection</span>
-              <span class="uc-tag">Real-time Alerts</span>
-              <span class="uc-tag">Risk Scoring</span>
-            </div>
-            <div class="uc-status">
-              <span class="uc-dot"></span>
-              <span style="color:var(--green)">Live</span>
-              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Serving retail investors daily</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 2: Verse Translator -->
-        <div class="uc-card reveal">
-          <div class="uc-banner" style="background:linear-gradient(90deg,#f59e0b,#ef4444)"></div>
-          <div class="uc-body">
-            <span class="uc-badge" style="background:var(--yellow-soft);color:#b45309;">Culture & Education</span>
-            <h3>Religious Verse Translator & Interpreter</h3>
-            <p>An AI-powered app that translates classical Tamil, Hindi, and Sanskrit poetry and religious verses into
-              English, modern Tamil, and Hindi — with scholarly context, line-by-line analysis, and literary
-              interpretation.</p>
-            <div class="uc-tags">
-              <span class="uc-tag">Claude AI</span>
-              <span class="uc-tag">Multi-language NLP</span>
-              <span class="uc-tag">OCR / Voice Input</span>
-              <span class="uc-tag">Mobile App</span>
-            </div>
-            <div class="uc-status">
-              <span class="uc-dot"></span>
-              <span style="color:var(--green)">Live</span>
-              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Kavya app on Android</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 3: LC Matching -->
-        <div class="uc-card reveal">
-          <div class="uc-banner" style="background:linear-gradient(90deg,#059669,#2563eb)"></div>
-          <div class="uc-body">
-            <span class="uc-badge" style="background:var(--green-soft);color:#047857;">Trade Finance</span>
-            <h3>LC Terms Matching & Document Compliance</h3>
-            <p>An intelligent document processing system for trading companies that automatically extracts terms from
-              Letters of Credit and cross-references them against invoices, packing lists, and shipping documents —
-              flagging discrepancies before they become costly rejections.</p>
-            <div class="uc-tags">
-              <span class="uc-tag">Document AI</span>
-              <span class="uc-tag">Term Extraction</span>
-              <span class="uc-tag">Compliance Rules</span>
-              <span class="uc-tag">Discrepancy Alerts</span>
-            </div>
-            <div class="uc-status">
-              <span class="uc-dot" style="background:var(--purple)"></span>
-              <span style="color:var(--purple)">In Development</span>
-              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Pilot with trading firm</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ═══ INDUSTRIES ══════════════════════════════════════ -->
   <section class="industries" id="industries">
     <div class="container">
@@ -2143,6 +2130,277 @@
               management.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PORTFOLIO ═══════════════════════════════════════ -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center;display:flex;flex-direction:column;align-items:center;">
+        <div class="section-tag">Portfolio</div>
+        <h2 class="section-title">What we've built</h2>
+        <p class="section-sub">Explore our showcase of intelligent software solutions — from AI-powered mobile apps to full-stack compliance platforms across multiple domains.</p>
+      </div>
+
+      <div class="pf-filter reveal">
+        <button class="pf-filter-btn active" data-filter="all">All</button>
+        <button class="pf-filter-btn" data-filter="fintech">FinTech</button>
+        <button class="pf-filter-btn" data-filter="mobile">Mobile</button>
+        <button class="pf-filter-btn" data-filter="ai">AI / NLP</button>
+        <button class="pf-filter-btn" data-filter="trading">Trading</button>
+        <button class="pf-filter-btn" data-filter="web">Web</button>
+      </div>
+
+      <div class="pf-grid">
+        <!-- Card 1: DivyaDesam Explorer -->
+        <div class="pf-card reveal" data-category="mobile">
+          <div class="pf-banner" style="background:linear-gradient(90deg,#f59e0b,#ef4444)"></div>
+          <div class="pf-body">
+            <div class="pf-top">
+              <div>
+                <span class="pf-badge" style="background:var(--purple-soft);color:var(--purple);">Mobile App</span>
+              </div>
+            </div>
+            <h3>DivyaDesam Explorer</h3>
+            <p class="pf-desc">Cross-platform reference app cataloguing all 108 sacred Vishnu temples across South India with devotional verses, transliteration, and scholarly context.</p>
+            <ul class="pf-features">
+              <li>108 temples across 6 geographic regions</li>
+              <li>158 temple-verse combinations with Tamil &amp; English</li>
+              <li>12 Azhwar poet-saint biographies</li>
+              <li>Offline-first — all data embedded locally</li>
+            </ul>
+            <div class="pf-tags">
+              <span class="pf-tag">React Native</span>
+              <span class="pf-tag">Expo</span>
+              <span class="pf-tag">TypeScript</span>
+            </div>
+            <div class="pf-status">
+              <span class="pf-dot" style="background:var(--green)"></span>
+              <span style="color:var(--green)">Case Study</span>
+              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Demo available</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: KYC Partner Verification -->
+        <div class="pf-card reveal" data-category="fintech mobile">
+          <div class="pf-banner" style="background:linear-gradient(90deg,#2563eb,#6366f1)"></div>
+          <div class="pf-body">
+            <div class="pf-top">
+              <div>
+                <span class="pf-badge" style="background:var(--blue-soft);color:var(--blue);">FinTech</span>
+              </div>
+            </div>
+            <h3>KYC Partner Verification</h3>
+            <p class="pf-desc">B2B partner due diligence app with multi-jurisdiction compliance screening, real-time company verification, and automated risk scoring.</p>
+            <ul class="pf-features">
+              <li>8-step KYC verification wizard</li>
+              <li>Multi-jurisdiction — UK, Singapore, India</li>
+              <li>Sanctions &amp; PEP screening via OpenSanctions</li>
+              <li>Automated risk scoring with 6 weighted factors</li>
+            </ul>
+            <div class="pf-tags">
+              <span class="pf-tag">Expo</span>
+              <span class="pf-tag">Supabase</span>
+              <span class="pf-tag">Companies House API</span>
+            </div>
+            <div class="pf-status">
+              <span class="pf-dot" style="background:var(--green)"></span>
+              <span style="color:var(--green)">Case Study</span>
+              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Demo available</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: LC Compliance Checker -->
+        <div class="pf-card reveal" data-category="fintech web">
+          <div class="pf-banner" style="background:linear-gradient(90deg,#059669,#2563eb)"></div>
+          <div class="pf-body">
+            <div class="pf-top">
+              <div>
+                <span class="pf-badge" style="background:var(--green-soft);color:#047857;">Trade Finance</span>
+              </div>
+            </div>
+            <h3>LC Compliance Checker</h3>
+            <p class="pf-desc">Full-stack application for validating Letter of Credit documents against UCP600 international trade rules with OCR-powered extraction.</p>
+            <ul class="pf-features">
+              <li>PDF extraction with OCR fallback for scanned docs</li>
+              <li>Fuzzy matching engine for field comparison</li>
+              <li>UCP600 compliance rule validation</li>
+              <li>Severity-graded compliance reports</li>
+            </ul>
+            <div class="pf-tags">
+              <span class="pf-tag">FastAPI</span>
+              <span class="pf-tag">React</span>
+              <span class="pf-tag">OCR</span>
+              <span class="pf-tag">RapidFuzz</span>
+            </div>
+            <div class="pf-status">
+              <span class="pf-dot" style="background:var(--green)"></span>
+              <span style="color:var(--green)">Case Study</span>
+              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Demo available</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Shreyati Creations -->
+        <div class="pf-card reveal" data-category="web">
+          <div class="pf-banner" style="background:linear-gradient(90deg,#ec4899,#f59e0b)"></div>
+          <div class="pf-body">
+            <div class="pf-top">
+              <div>
+                <span class="pf-badge" style="background:var(--pink-soft);color:#be185d;">E-Commerce</span>
+              </div>
+            </div>
+            <h3>Shreyati Creations</h3>
+            <p class="pf-desc">Brand showcase website for a handcrafted jewelry business — elegant design with scroll animations, product grid, and responsive layout.</p>
+            <ul class="pf-features">
+              <li>Product showcase grid with 6 categories</li>
+              <li>Scroll-reveal animations</li>
+              <li>Responsive design with mobile menu</li>
+              <li>Elegant dual-font typography</li>
+            </ul>
+            <div class="pf-tags">
+              <span class="pf-tag">HTML</span>
+              <span class="pf-tag">CSS</span>
+              <span class="pf-tag">JavaScript</span>
+            </div>
+            <div class="pf-status">
+              <span class="pf-dot" style="background:var(--green)"></span>
+              <span style="color:var(--green)">Showcase</span>
+              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Demo available</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Trading Opportunity Scanner -->
+        <div class="pf-card reveal" data-category="trading web">
+          <div class="pf-banner" style="background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div>
+          <div class="pf-body">
+            <div class="pf-top">
+              <div>
+                <span class="pf-badge" style="background:var(--purple-soft);color:var(--purple);">Investment</span>
+              </div>
+            </div>
+            <h3>Trading Opportunity Scanner</h3>
+            <p class="pf-desc">Multi-asset investment research tool that automates discovery of trading opportunities with technical analysis and backtesting capabilities.</p>
+            <ul class="pf-features">
+              <li>Technical indicators: SMA, EMA, MACD, RSI, Bollinger Bands</li>
+              <li>Backtesting engine for strategy validation</li>
+              <li>Multi-asset: US equities, India NSE, options, FX</li>
+              <li>Multiple data sources: Polygon.io, Finnhub, NSEPython</li>
+            </ul>
+            <div class="pf-tags">
+              <span class="pf-tag">Nx Monorepo</span>
+              <span class="pf-tag">FastAPI</span>
+              <span class="pf-tag">React</span>
+              <span class="pf-tag">NumPy</span>
+            </div>
+            <div class="pf-status">
+              <span class="pf-dot" style="background:var(--purple)"></span>
+              <span style="color:var(--purple)">Proof of Concept</span>
+              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Architecture designed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Compliance Tracker -->
+        <div class="pf-card reveal" data-category="fintech web">
+          <div class="pf-banner" style="background:linear-gradient(90deg,#2563eb,#059669)"></div>
+          <div class="pf-body">
+            <div class="pf-top">
+              <div>
+                <span class="pf-badge" style="background:var(--blue-soft);color:var(--blue);">SaaS</span>
+              </div>
+            </div>
+            <h3>Compliance Tracker</h3>
+            <p class="pf-desc">SaaS platform that helps startups manage compliance requirements — auto-matching applicable regulations with task management and dashboard metrics.</p>
+            <ul class="pf-features">
+              <li>Auto-compliance matching by jurisdiction &amp; industry</li>
+              <li>Task management with assignment tracking</li>
+              <li>Dashboard with KPI metrics &amp; compliance score</li>
+              <li>Multi-tenant RBAC architecture</li>
+            </ul>
+            <div class="pf-tags">
+              <span class="pf-tag">Express</span>
+              <span class="pf-tag">React</span>
+              <span class="pf-tag">Prisma</span>
+              <span class="pf-tag">PostgreSQL</span>
+            </div>
+            <div class="pf-status">
+              <span class="pf-dot" style="background:var(--green)"></span>
+              <span style="color:var(--green)">Showcase</span>
+              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Demo available</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: KYC Partner Starter -->
+        <div class="pf-card reveal" data-category="mobile">
+          <div class="pf-banner" style="background:linear-gradient(90deg,#f59e0b,#ef4444)"></div>
+          <div class="pf-body">
+            <div class="pf-top">
+              <div>
+                <span class="pf-badge" style="background:var(--yellow-soft);color:#b45309;">Starter Kit</span>
+              </div>
+            </div>
+            <h3>KYC Partner Starter</h3>
+            <p class="pf-desc">Pre-configured Expo React Native project scaffold designed as a reusable foundation for building KYC partner verification apps.</p>
+            <ul class="pf-features">
+              <li>Production-ready Expo project structure</li>
+              <li>TypeScript strict mode configuration</li>
+              <li>Cross-platform: iOS, Android, Web</li>
+              <li>Ready for KYC feature integration</li>
+            </ul>
+            <div class="pf-tags">
+              <span class="pf-tag">Expo</span>
+              <span class="pf-tag">React Native</span>
+              <span class="pf-tag">TypeScript</span>
+            </div>
+            <div class="pf-status">
+              <span class="pf-dot" style="background:#f59e0b"></span>
+              <span style="color:#b45309">Starter Template</span>
+              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Reusable scaffold</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8: Kavya — Poetry Translator -->
+        <div class="pf-card reveal" data-category="mobile ai">
+          <div class="pf-banner" style="background:linear-gradient(90deg,#14b8a6,#6366f1)"></div>
+          <div class="pf-body">
+            <div class="pf-top">
+              <div>
+                <span class="pf-badge" style="background:var(--teal-soft);color:#0f766e;">AI / NLP</span>
+              </div>
+            </div>
+            <h3>Kavya — Poetry Translator</h3>
+            <p class="pf-desc">AI-powered cross-platform app that translates and interprets Tamil, Hindi, and Sanskrit poetry — with scholarly context and literary analysis.</p>
+            <ul class="pf-features">
+              <li>Four input methods: text, camera, voice, clipboard</li>
+              <li>Claude AI-powered translation with structured output</li>
+              <li>Line-by-line literal + poetic interpretation</li>
+              <li>Translation history with scholarly context</li>
+            </ul>
+            <div class="pf-tags">
+              <span class="pf-tag">Expo</span>
+              <span class="pf-tag">Claude AI</span>
+              <span class="pf-tag">Supabase</span>
+              <span class="pf-tag">TypeScript</span>
+            </div>
+            <div class="pf-status">
+              <span class="pf-dot" style="background:var(--green)"></span>
+              <span style="color:var(--green)">Case Study</span>
+              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Demo available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pf-cta-row reveal">
+        <a href="../jsk-portfolio/index.html" class="btn btn-dark btn-lg">View Full Portfolio →</a>
+        <a href="../jsk-portfolio/slides.html" class="btn btn-outline btn-lg" style="margin-left:12px;">View Presentation</a>
       </div>
     </div>
   </section>
@@ -2284,7 +2542,7 @@
       <p>Let's talk about your bottlenecks. Start with a free discovery call — no engineering team required on your
         side.</p>
       <div class="cta-btns">
-        <a href="mailto:hello@jskai.in" class="btn btn-green btn-lg">Start for Free →</a>
+        <a href="mailto:hello@jskai.ai" class="btn btn-green btn-lg">Start for Free →</a>
         <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jskai'});return false;" class="btn btn-ghost-white btn-lg">Schedule a Demo</a>
       </div>
     </div>
@@ -2323,7 +2581,7 @@
           <p class="footer-col-head">Company</p>
           <ul class="footer-links">
             <li><a href="#about">About Us</a></li>
-            <li><a href="#">Case Studies</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">Contact</a></li>
@@ -2400,6 +2658,22 @@
         document.querySelectorAll('.faq-item.open').forEach(o => o.classList.remove('open'));
         // toggle current
         if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    /* Portfolio filter */
+    document.querySelectorAll('.pf-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.pf-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.pf-card').forEach(card => {
+          if (filter === 'all' || card.dataset.category.includes(filter)) {
+            card.classList.remove('hidden-card');
+          } else {
+            card.classList.add('hidden-card');
+          }
+        });
       });
     });
   </script>
