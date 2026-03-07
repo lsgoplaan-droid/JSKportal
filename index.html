@@ -609,7 +609,7 @@
       font-size: 15px;
     }
 
-    /* ─── SERVICES ────────────────────────────────────── */
+    /* ─── SERVICES / SOLUTIONS TIERS ─────────────────── */
     .services {
       padding: 100px 32px;
     }
@@ -617,64 +617,152 @@
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 24px;
     }
 
-    .svc-card {
+    .tier-card {
       background: var(--bg-white);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 30px;
+      padding: 36px 30px;
       position: relative;
       overflow: hidden;
       transition: transform .25s, box-shadow .25s, border-color .25s;
+      display: flex;
+      flex-direction: column;
     }
 
-    .svc-card::after {
+    .tier-card::after {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--purple), #ec4899);
+      height: 4px;
+      background: var(--tier-accent, var(--purple));
       transform: scaleX(0);
       transform-origin: left;
       transition: transform .3s ease;
     }
 
-    .svc-card:hover {
+    .tier-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-hover);
       border-color: rgba(99, 102, 241, .2);
     }
 
-    .svc-card:hover::after {
+    .tier-card:hover::after {
       transform: scaleX(1);
     }
 
-    .svc-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      margin-bottom: 18px;
+    .tier-card.featured {
+      border-color: var(--purple);
+      box-shadow: 0 4px 32px rgba(99, 102, 241, 0.12);
     }
 
-    .svc-card h3 {
-      font-size: 17px;
+    .tier-card.featured::after {
+      transform: scaleX(1);
+    }
+
+    .tier-badge {
+      display: inline-block;
+      font-size: 11px;
       font-weight: 700;
-      margin-bottom: 10px;
-      letter-spacing: -.3px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      width: fit-content;
     }
 
-    .svc-card p {
+    .tier-badge.solo { background: var(--green-soft); color: #059669; }
+    .tier-badge.small { background: var(--purple-soft); color: var(--purple); }
+    .tier-badge.medium { background: var(--blue-soft); color: var(--blue); }
+
+    .tier-card h3 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -.5px;
+    }
+
+    .tier-card > p {
       font-size: 13.5px;
       color: var(--text-2);
-      line-height: 1.65;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .tier-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      flex: 1;
+    }
+
+    .tier-list li {
+      font-size: 14px;
+      color: var(--text);
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.45;
+    }
+
+    .tier-list li:last-child { border-bottom: none; }
+
+    .tier-list li::before {
+      content: '✓';
+      font-weight: 700;
+      color: var(--green, #00e882);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .tier-list .inherited {
+      color: var(--text-3);
+    }
+
+    .tier-list .inherited::before {
+      content: '+';
+      color: var(--text-3);
+    }
+
+    .tier-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 12px 24px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .2s, transform .1s;
+      margin-top: auto;
+    }
+
+    .tier-cta.outline {
+      border: 1.5px solid var(--purple);
+      color: var(--purple);
+      background: transparent;
+    }
+
+    .tier-cta.outline:hover {
+      background: var(--purple-soft);
+    }
+
+    .tier-cta.filled {
+      background: var(--purple);
+      color: #fff;
+      border: 1.5px solid var(--purple);
+    }
+
+    .tier-cta.filled:hover {
+      background: #4f46e5;
     }
 
     .svc-link {
@@ -1888,51 +1976,46 @@
     <div class="hero-cards">
       <!-- Wide dark card -->
       <div class="hcard dark" style="grid-row: span 2;">
-        <div class="hcard-icon" style="background:rgba(0,232,130,.14);">🤖</div>
-        <h3>AI Workflow Engine</h3>
-        <p>We can reconfigure your business processes with Intelligent pipelines that connect your apps, automate
-          complex decisions, and run 24/7 without human
-          intervention.</p>
+        <div class="hcard-icon" style="background:rgba(0,232,130,.14);">🚀</div>
+        <h3>Solutions for Every Stage</h3>
+        <p>From your first website to full AI-powered automation — we grow with you. Pick the tier that fits and scale
+          when you're ready.</p>
         <div class="pipeline">
-          <div class="pipe-node">Trigger</div>
+          <div class="pipe-node">Starter</div>
           <span class="pipe-arrow">→</span>
-          <div class="pipe-node">AI Decides</div>
+          <div class="pipe-node">Growth</div>
           <span class="pipe-arrow">→</span>
-          <div class="pipe-node">Action</div>
-          <span class="pipe-arrow">→</span>
-          <div class="pipe-node">Notify</div>
+          <div class="pipe-node">Scale</div>
         </div>
         <div class="chip-row">
-          <span class="chip">↑ ++% efficiency</span>
-          <span class="chip">⚡ ++ faster</span>
-          <span class="chip">✓ 99.9% uptime</span>
+          <span class="chip">🌐 Website &amp; CRM</span>
+          <span class="chip">💬 AI Chatbots</span>
+          <span class="chip">⚙️ Automation</span>
         </div>
       </div>
 
       <div class="hcard">
-        <div class="hcard-icon" style="background:var(--purple-soft);">📄</div>
-        <h3>Document AI</h3>
-        <p>We can design Knowledge base AI to Extract, classify, and process invoices, contracts &amp; forms with 99%+
-          accuracy.</p>
+        <div class="hcard-icon" style="background:var(--green-soft);">🌐</div>
+        <h3>Website &amp; Hosting</h3>
+        <p>Professional website — designed, built, hosted &amp; maintained so you can focus on your business.</p>
       </div>
 
       <div class="hcard">
-        <div class="hcard-icon" style="background:var(--blue-soft);">💬</div>
-        <h3>AI Assistants</h3>
-        <p>We can Deploy custom chatbots trained on your knowledge base for 24/7 support.</p>
+        <div class="hcard-icon" style="background:var(--blue-soft);">📱</div>
+        <h3>WhatsApp CRM</h3>
+        <p>Manage leads, automate replies &amp; follow-ups — all from WhatsApp, the app your customers already use.</p>
       </div>
 
       <div class="hcard">
-        <div class="hcard-icon" style="background:var(--yellow-soft);">📊</div>
-        <h3>Predictive Analytics</h3>
-        <p>We can design Real-time dashboards and AI-driven forecasts from your business data.</p>
+        <div class="hcard-icon" style="background:var(--purple-soft);">💬</div>
+        <h3>AI Chatbots</h3>
+        <p>Custom chatbots trained on your knowledge base for 24/7 customer support &amp; lead qualification.</p>
       </div>
 
       <div class="hcard">
-        <div class="hcard-icon" style="background:var(--pink-soft);">🔗</div>
-        <h3>Custom Integrations</h3>
-        <p>Connect Salesforce, SAP, Google Workspace, and hundreds of other apps seamless integrations leveraging AI.
-        </p>
+        <div class="hcard-icon" style="background:var(--yellow-soft);">🤖</div>
+        <h3>AI Agent Automation</h3>
+        <p>Autonomous AI agents that execute multi-step business tasks — no manual intervention required.</p>
       </div>
     </div>
   </section>
@@ -1944,52 +2027,57 @@
     </div>
   </div>
 
-  <!-- ═══ SERVICES ════════════════════════════════════════ -->
+  <!-- ═══ SERVICES / SOLUTIONS ════════════════════════════ -->
   <section class="services" id="services">
     <div class="container">
       <div class="section-header reveal">
-        <div class="section-tag">Our Services</div>
-        <h2 class="section-title">Everything you need<br>to automate your business</h2>
-        <p class="section-sub">From AI-powered workflows to intelligent document processing—we build the automation
-          layer your business needs to grow.</p>
+        <div class="section-tag">Our Solutions</div>
+        <h2 class="section-title">Right-sized solutions<br>for every stage of growth</h2>
+        <p class="section-sub">Whether you're a solopreneur, a growing team, or a scaling enterprise—we have the
+          exact package to move your business forward.</p>
       </div>
 
       <div class="services-grid">
-        <div class="svc-card reveal">
-          <div class="svc-icon" style="background:var(--purple-soft)">🔄</div>
-          <h3>AI Workflow Automation</h3>
-          <p>We can design and deploy multi-step workflows that run autonomously. Connect any tool, trigger any action,
-            automate any process—visually or in plain English.</p>
-          <a href="#cta" class="svc-link">Just ASK.. →</a>
-        </div>
-        <div class="svc-card reveal">
-          <div class="svc-icon" style="background:var(--blue-soft)">📄</div>
-          <h3>Intelligent Document Processing</h3>
-          <p>We can design AI solutions that extract data from invoices, contracts, and forms. Classify, validate, and route documents
-            automatically—zero manual data entry required.</p>
-          <a href="#cta" class="svc-link">Just ASK.. →</a>
-        </div>
-        <div class="svc-card reveal">
-          <div class="svc-icon" style="background:var(--green-soft)">💬</div>
-          <h3>AI Chatbots &amp; Assistants</h3>
-          <p>Build powerful conversational AI trained on your knowledge base. Handle customer queries, qualify leads,
-            and support internal teams around the clock.</p>
-          <a href="#cta" class="svc-link">Just ASK.. →</a>
-        </div>
-        <div class="svc-card reveal">
-          <div class="svc-icon" style="background:var(--yellow-soft)">📊</div>
-          <h3>Data Analytics &amp; Insights</h3>
-          <p>Turn raw data into clear decisions. Real-time dashboards, predictive models, and automated reports
-            delivered directly to your team's inbox.</p>
-          <a href="#cta" class="svc-link">Just ASK.. →</a>
+        <!-- TIER 1: Solo & Small Entrepreneurs -->
+        <div class="tier-card reveal" style="--tier-accent: #059669;">
+          <div class="tier-badge solo">Starter</div>
+          <h3>Solo &amp; Small Entrepreneurs</h3>
+          <p>Get online, get organized, and start growing — with zero tech headaches on your side.</p>
+          <ul class="tier-list">
+            <li>Professional website — design, build &amp; launch</li>
+            <li>Hosting, SSL &amp; ongoing maintenance</li>
+            <li>WhatsApp CRM — manage leads, automate replies &amp; follow-ups</li>
+          </ul>
+          <a href="#cta" class="tier-cta outline">Just Ask →</a>
         </div>
 
-        <div class="svc-card reveal">
-          <div class="svc-icon" style="background:var(--teal-soft)">🚀</div>
-          <h3>Digital Transformation</h3>
-          <p>End-to-end consulting and implementation to modernize your business—from legacy systems to cloud-native AI
-            infrastructure built for scale.</p>
-          <a href="#cta" class="svc-link">Just ASK.. →</a>
+        <!-- TIER 2: Small Enterprises -->
+        <div class="tier-card featured reveal" style="--tier-accent: var(--purple);">
+          <div class="tier-badge small">Growth</div>
+          <h3>Small Enterprises</h3>
+          <p>Everything in Starter, plus intelligent AI that works for your business around the clock.</p>
+          <ul class="tier-list">
+            <li class="inherited">Website build, host &amp; maintain</li>
+            <li class="inherited">WhatsApp CRM</li>
+            <li>Custom AI Chatbot — trained on your knowledge base, handling queries 24/7</li>
+            <li>Custom CRM integration — connect your sales pipeline &amp; customer data</li>
+          </ul>
+          <a href="#cta" class="tier-cta filled">Just Ask →</a>
+        </div>
+
+        <!-- TIER 3: Medium Enterprises -->
+        <div class="tier-card reveal" style="--tier-accent: var(--blue);">
+          <div class="tier-badge medium">Scale</div>
+          <h3>Medium Enterprises</h3>
+          <p>Full-scale digital transformation — from process automation to AI agents that run your operations.</p>
+          <ul class="tier-list">
+            <li class="inherited">Everything in Growth</li>
+            <li>Digitalization — modernize legacy processes &amp; go paperless</li>
+            <li>Workflow Automation — connect tools, trigger actions, eliminate manual work</li>
+            <li>AI Agent Automation — autonomous agents that execute multi-step business tasks</li>
+            <li>Digital Transformation — end-to-end consulting &amp; implementation</li>
+          </ul>
+          <a href="#cta" class="tier-cta outline">Let's Talk →</a>
         </div>
       </div>
     </div>
@@ -2567,13 +2655,13 @@
         </div>
 
         <div>
-          <p class="footer-col-head">Services</p>
+          <p class="footer-col-head">Solutions</p>
           <ul class="footer-links">
-            <li><a href="#">AI Workflow Automation</a></li>
-            <li><a href="#">Document Processing</a></li>
-            <li><a href="#">AI Chatbots</a></li>
-            <li><a href="#">Data Analytics</a></li>
-            <li><a href="#">RPA Solutions</a></li>
+            <li><a href="#services">Website Build &amp; Hosting</a></li>
+            <li><a href="#services">WhatsApp CRM</a></li>
+            <li><a href="#services">AI Chatbots</a></li>
+            <li><a href="#services">Workflow Automation</a></li>
+            <li><a href="#services">Digital Transformation</a></li>
           </ul>
         </div>
 
