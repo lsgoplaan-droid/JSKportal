@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSK AI Automation & Digital Solutions — Capabilities Showcase</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Reveal.js v5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.min.css" id="theme">
+
+  <style>
+    /* =========================================
+       JSK Brand Theme Overrides
+       ========================================= */
+
+    :root {
+      --jsk-primary: #6366f1;
+      --jsk-accent: #00e882;
+      --jsk-dark-bg: #0b0b14;
+      --jsk-secondary-dark: #13132a;
+      --jsk-text-light: #ffffff;
+      --jsk-text-secondary: #c0c0d0;
+      --jsk-card-radius: 16px;
+      --jsk-badge-radius: 9999px;
+      --jsk-badge-square-radius: 8px;
+    }
+
+    /* Global reveal overrides */
+    .reveal {
+      background: var(--jsk-dark-bg);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3,
+    .reveal h4 {
+      font-family: 'Inter', sans-serif;
+      color: var(--jsk-text-light);
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .reveal h1 {
+      font-size: 2.4em;
+      font-weight: 800;
+    }
+
+    .reveal h2 {
+      font-size: 1.8em;
+      margin-bottom: 0.6em;
+    }
+
+    .reveal h3 {
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    .reveal p {
+      color: var(--jsk-text-secondary);
+      font-size: 0.85em;
+      line-height: 1.65;
+      font-weight: 400;
+    }
+
+    .reveal ul,
+    .reveal li {
+      color: var(--jsk-text-secondary);
+      font-size: 0.8em;
+      line-height: 1.6;
+    }
+
+    .reveal section {
+      padding: 40px 20px;
+    }
+
+    /* =========================================
+       Utility Classes
+       ========================================= */
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, var(--jsk-primary), var(--jsk-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .muted {
+      color: var(--jsk-text-secondary);
+      font-size: 0.7em;
+    }
+
+    .small-muted {
+      color: #8888a0;
+      font-size: 0.55em;
+      letter-spacing: 0.05em;
+    }
+
+    .accent {
+      color: var(--jsk-accent);
+    }
+
+    .primary {
+      color: var(--jsk-primary);
+    }
+
+    /* =========================================
+       Title Slide
+       ========================================= */
+
+    .title-slide {
+      text-align: center;
+    }
+
+    .title-slide h1 {
+      font-size: 2.6em;
+      margin-bottom: 0.15em;
+    }
+
+    .title-slide .subtitle {
+      font-size: 1.1em;
+      color: var(--jsk-accent);
+      font-weight: 500;
+      margin-bottom: 1.2em;
+    }
+
+    .title-slide .meta {
+      font-size: 0.65em;
+      color: #8888a0;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .title-divider {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--jsk-primary), var(--jsk-accent));
+      margin: 1em auto;
+      border-radius: 2px;
+    }
+
+    /* =========================================
+       Section Headings
+       ========================================= */
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 0.8em;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 0.1em;
+    }
+
+    .heading-underline {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--jsk-primary), var(--jsk-accent));
+      margin: 0 auto 0.8em;
+      border-radius: 2px;
+    }
+
+    .heading-underline.left {
+      margin-left: 0;
+    }
+
+    /* =========================================
+       Stat Row
+       ========================================= */
+
+    .stat-row {
+      display: flex;
+      justify-content: center;
+      gap: 2.5em;
+      margin-top: 1.5em;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 1.6em;
+      font-weight: 800;
+      color: var(--jsk-accent);
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 0.6em;
+      color: #8888a0;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* =========================================
+       Portfolio Table
+       ========================================= */
+
+    .portfolio-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: 0.65em;
+      border-radius: var(--jsk-card-radius);
+      overflow: hidden;
+    }
+
+    .portfolio-table thead th {
+      background: var(--jsk-primary);
+      color: var(--jsk-text-light);
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.95em;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .portfolio-table tbody td {
+      padding: 10px 16px;
+      color: var(--jsk-text-secondary);
+      border-bottom: 1px solid rgba(99, 102, 241, 0.12);
+    }
+
+    .portfolio-table tbody tr {
+      background: var(--jsk-secondary-dark);
+    }
+
+    .portfolio-table tbody tr:nth-child(even) {
+      background: rgba(19, 19, 42, 0.6);
+    }
+
+    .portfolio-table tbody tr:hover {
+      background: rgba(99, 102, 241, 0.08);
+    }
+
+    .portfolio-table .project-name {
+      color: var(--jsk-text-light);
+      font-weight: 600;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: var(--jsk-badge-radius);
+      font-size: 0.85em;
+      font-weight: 600;
+    }
+
+    .status-production {
+      background: rgba(0, 232, 130, 0.15);
+      color: var(--jsk-accent);
+    }
+
+    .status-development {
+      background: rgba(99, 102, 241, 0.2);
+      color: var(--jsk-primary);
+    }
+
+    .status-prototype {
+      background: rgba(251, 191, 36, 0.15);
+      color: #fbbf24;
+    }
+
+    .status-template {
+      background: rgba(168, 162, 158, 0.15);
+      color: #a8a29e;
+    }
+
+    /* =========================================
+       Project Slide Layout
+       ========================================= */
+
+    .project-slide {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2em;
+      align-items: start;
+    }
+
+    .project-left h2 {
+      font-size: 1.5em;
+      margin-bottom: 0.3em;
+    }
+
+    .category-badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: var(--jsk-badge-radius);
+      font-size: 0.6em;
+      font-weight: 600;
+      background: rgba(99, 102, 241, 0.15);
+      color: var(--jsk-primary);
+      margin-bottom: 0.8em;
+    }
+
+    .project-left p {
+      font-size: 0.72em;
+      line-height: 1.65;
+    }
+
+    .project-right {
+      padding: 1.2em;
+      background: var(--jsk-secondary-dark);
+      border-radius: var(--jsk-card-radius);
+      border: 1px solid rgba(99, 102, 241, 0.1);
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 1em;
+    }
+
+    .tech-pill {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: var(--jsk-badge-radius);
+      font-size: 0.55em;
+      font-weight: 500;
+      background: rgba(99, 102, 241, 0.12);
+      color: #a5b4fc;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .feature-list li {
+      position: relative;
+      padding-left: 1.2em;
+      margin-bottom: 0.45em;
+      font-size: 0.65em;
+      color: var(--jsk-text-secondary);
+    }
+
+    .feature-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--jsk-accent);
+    }
+
+    .project-status {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0.8em;
+    }
+
+    .features-heading {
+      font-size: 0.65em;
+      color: #8888a0;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.6em;
+      font-weight: 600;
+    }
+
+    /* =========================================
+       Tech Stack Grid (Slide 12)
+       ========================================= */
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+    }
+
+    .tech-group {
+      background: var(--jsk-secondary-dark);
+      border-radius: var(--jsk-card-radius);
+      padding: 1em 1.2em;
+      border: 1px solid rgba(99, 102, 241, 0.1);
+    }
+
+    .tech-group-wide {
+      grid-column: span 2;
+    }
+
+    .tech-group h4 {
+      font-size: 0.6em;
+      color: var(--jsk-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.6em;
+      font-weight: 700;
+    }
+
+    .tech-group .tech-stack {
+      margin-bottom: 0;
+    }
+
+    /* =========================================
+       Patterns List (Slide 13)
+       ========================================= */
+
+    .patterns-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7em 2em;
+      margin-top: 1em;
+    }
+
+    .pattern-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7em;
+      background: var(--jsk-secondary-dark);
+      border-radius: 12px;
+      padding: 0.8em 1em;
+      border: 1px solid rgba(99, 102, 241, 0.08);
+    }
+
+    .pattern-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--jsk-primary), #818cf8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7em;
+      color: white;
+      font-weight: 700;
+    }
+
+    .pattern-text {
+      font-size: 0.68em;
+      color: var(--jsk-text-secondary);
+      line-height: 1.4;
+    }
+
+    /* =========================================
+       Domain Cards (Slide 14)
+       ========================================= */
+
+    .domain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+      margin-top: 1em;
+    }
+
+    .domain-card {
+      background: var(--jsk-secondary-dark);
+      border-radius: var(--jsk-card-radius);
+      padding: 1.5em 1.2em;
+      text-align: center;
+      border: 1px solid rgba(99, 102, 241, 0.1);
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .domain-card:hover {
+      border-color: var(--jsk-primary);
+      transform: translateY(-2px);
+    }
+
+    .domain-icon {
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 0.7em;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2em;
+    }
+
+    .domain-icon.purple {
+      background: rgba(99, 102, 241, 0.15);
+    }
+
+    .domain-icon.green {
+      background: rgba(0, 232, 130, 0.15);
+    }
+
+    .domain-icon.yellow {
+      background: rgba(251, 191, 36, 0.15);
+    }
+
+    .domain-card h3 {
+      font-size: 0.75em;
+      margin-bottom: 0;
+    }
+
+    /* =========================================
+       Metrics Grid (Slide 15)
+       ========================================= */
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+      margin-top: 1em;
+    }
+
+    .metric-card {
+      background: var(--jsk-secondary-dark);
+      border-radius: var(--jsk-card-radius);
+      padding: 1.2em;
+      border-left: 3px solid var(--jsk-primary);
+    }
+
+    .metric-card:nth-child(even) {
+      border-left-color: var(--jsk-accent);
+    }
+
+    .metric-value {
+      font-size: 0.85em;
+      font-weight: 700;
+      color: var(--jsk-text-light);
+      line-height: 1.3;
+      margin-bottom: 0.3em;
+    }
+
+    .metric-context {
+      font-size: 0.58em;
+      color: #8888a0;
+      line-height: 1.4;
+    }
+
+    /* =========================================
+       Contact Slide
+       ========================================= */
+
+    .contact-slide {
+      text-align: center;
+    }
+
+    .contact-slide h2 {
+      font-size: 2em;
+    }
+
+    .contact-slide p {
+      max-width: 600px;
+      margin: 0 auto 0.8em;
+      font-size: 0.82em;
+    }
+
+    .contact-brand {
+      font-size: 0.75em;
+      font-weight: 700;
+      color: var(--jsk-primary);
+      margin-top: 1.5em;
+    }
+
+    .contact-link {
+      display: inline-block;
+      margin-top: 1.2em;
+      padding: 10px 28px;
+      border-radius: var(--jsk-badge-radius);
+      background: linear-gradient(135deg, var(--jsk-primary), #818cf8);
+      color: white;
+      font-size: 0.7em;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .contact-link:hover {
+      opacity: 0.85;
+      color: white;
+    }
+
+    /* =========================================
+       Overview slide
+       ========================================= */
+
+    .overview-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .overview-content p {
+      text-align: center;
+      font-size: 0.82em;
+    }
+
+    .stats-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(99, 102, 241, 0.2);
+      margin: 1.5em 0 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ============================================================
+           SLIDE 1: Title
+           ============================================================ -->
+      <section class="title-slide">
+        <h1>JSK <span class="text-gradient">AI Automation</span><br>& Digital Solutions</h1>
+        <div class="title-divider"></div>
+        <p class="subtitle">Capabilities Showcase</p>
+        <p class="meta">8 Showcases &middot; 6 Domains &middot; 12+ Technologies</p>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 2: About / Overview
+           ============================================================ -->
+      <section>
+        <div class="section-heading">
+          <h2>Who We Are</h2>
+          <div class="heading-underline"></div>
+        </div>
+        <div class="overview-content">
+          <p>We build intelligent software solutions that transform complex business processes into streamlined digital experiences.</p>
+          <p>These showcase projects demonstrate our capabilities across fintech compliance, cultural preservation, investment research, e-commerce, and AI-powered language technology &mdash; examples of the solutions we can build for your business.</p>
+          <div class="stats-divider"></div>
+          <div class="stat-row">
+            <div class="stat-item">
+              <span class="stat-number">8</span>
+              <span class="stat-label">Showcases</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">6</span>
+              <span class="stat-label">Domains</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">12+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 3: Portfolio at a Glance
+           ============================================================ -->
+      <section>
+        <div class="section-heading">
+          <h2>Our Showcases</h2>
+          <div class="heading-underline"></div>
+        </div>
+        <table class="portfolio-table">
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Domain</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="project-name">DivyaDesam Explorer</td>
+              <td>Mobile / Cultural</td>
+              <td><span class="status-badge status-production">Case Study</span></td>
+            </tr>
+            <tr>
+              <td class="project-name">KYC Partner Verification</td>
+              <td>FinTech</td>
+              <td><span class="status-badge status-production">Case Study</span></td>
+            </tr>
+            <tr>
+              <td class="project-name">LC Compliance Checker</td>
+              <td>FinTech / Trade</td>
+              <td><span class="status-badge status-production">Case Study</span></td>
+            </tr>
+            <tr>
+              <td class="project-name">Shreyati Creations</td>
+              <td>E-Commerce</td>
+              <td><span class="status-badge status-production">Case Study</span></td>
+            </tr>
+            <tr>
+              <td class="project-name">Trading Opportunity Scanner</td>
+              <td>Investment</td>
+              <td><span class="status-badge status-development">Proof of Concept</span></td>
+            </tr>
+            <tr>
+              <td class="project-name">Compliance Tracker</td>
+              <td>FinTech / SaaS</td>
+              <td><span class="status-badge status-prototype">Showcase</span></td>
+            </tr>
+            <tr>
+              <td class="project-name">KYC Partner Starter</td>
+              <td>Mobile / Template</td>
+              <td><span class="status-badge status-template">Starter Kit</span></td>
+            </tr>
+            <tr>
+              <td class="project-name">Kavya &mdash; Poetry Translator</td>
+              <td>AI / NLP</td>
+              <td><span class="status-badge status-production">Case Study</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 4: DivyaDesam Explorer
+           ============================================================ -->
+      <section>
+        <div class="project-slide">
+          <div class="project-left">
+            <h2>DivyaDesam Explorer</h2>
+            <span class="category-badge">Mobile App</span>
+            <p>A cross-platform mobile reference app cataloguing all 108 Divya Desam temples &mdash; sacred Vishnu temples across South India. Features complete temple data, poet-saint biographies, and Nalayira Divya Prabandham verses with Tamil text, transliteration, and English meanings.</p>
+          </div>
+          <div class="project-right">
+            <div class="tech-stack">
+              <span class="tech-pill">React Native</span>
+              <span class="tech-pill">Expo</span>
+              <span class="tech-pill">TypeScript</span>
+              <span class="tech-pill">Expo Router</span>
+            </div>
+            <div class="features-heading">Key Features</div>
+            <ul class="feature-list">
+              <li>108 temples across 6 geographic regions</li>
+              <li>12 Azhwar poet-saints with biographical data</li>
+              <li>158 temple-verse combinations with Tamil/English</li>
+              <li>Offline-first &mdash; all data embedded locally</li>
+              <li>Pre-built APK available</li>
+            </ul>
+            <div class="project-status">
+              <span class="status-badge status-production">Case Study</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 5: KYC Partner Verification
+           ============================================================ -->
+      <section>
+        <div class="project-slide">
+          <div class="project-left">
+            <h2>KYC Partner Verification</h2>
+            <span class="category-badge">FinTech</span>
+            <p>A comprehensive mobile and web app demonstration for B2B partner due diligence. Integrates Companies House UK and OpenSanctions APIs for real-time company verification and sanctions screening with automated risk scoring.</p>
+          </div>
+          <div class="project-right">
+            <div class="tech-stack">
+              <span class="tech-pill">Expo</span>
+              <span class="tech-pill">React Native</span>
+              <span class="tech-pill">Supabase</span>
+              <span class="tech-pill">Companies House API</span>
+              <span class="tech-pill">OpenSanctions</span>
+            </div>
+            <div class="features-heading">Key Features</div>
+            <ul class="feature-list">
+              <li>8-step KYC verification wizard</li>
+              <li>Multi-jurisdiction: UK, Singapore, India</li>
+              <li>Real-time sanctions &amp; PEP screening</li>
+              <li>Automated risk scoring (6 weighted factors)</li>
+              <li>Document management with Supabase Storage</li>
+            </ul>
+            <div class="project-status">
+              <span class="status-badge status-production">Case Study</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 6: LC Compliance Checker
+           ============================================================ -->
+      <section>
+        <div class="project-slide">
+          <div class="project-left">
+            <h2>LC Compliance Checker</h2>
+            <span class="category-badge">FinTech / Trade</span>
+            <p>A full-stack application for validating Letter of Credit documents against UCP600 international trade rules. Extracts data from LCs, invoices, bills of lading, and certificates using PDF parsing and OCR.</p>
+          </div>
+          <div class="project-right">
+            <div class="tech-stack">
+              <span class="tech-pill">FastAPI</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">PyMuPDF</span>
+              <span class="tech-pill">Tesseract OCR</span>
+              <span class="tech-pill">RapidFuzz</span>
+            </div>
+            <div class="features-heading">Key Features</div>
+            <ul class="feature-list">
+              <li>PDF extraction with OCR fallback</li>
+              <li>Fuzzy matching for field comparison</li>
+              <li>UCP600 compliance rule engine</li>
+              <li>Severity-graded compliance reports</li>
+              <li>Multi-document session management</li>
+            </ul>
+            <div class="project-status">
+              <span class="status-badge status-production">Case Study</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 7: Shreyati Creations
+           ============================================================ -->
+      <section>
+        <div class="project-slide">
+          <div class="project-left">
+            <h2>Shreyati Creations</h2>
+            <span class="category-badge">E-Commerce</span>
+            <p>A brand showcase website for Shreyati Creations, a handcrafted jewelry and artisan accessories business. Clean, elegant design with scroll animations and responsive layout.</p>
+          </div>
+          <div class="project-right">
+            <div class="tech-stack">
+              <span class="tech-pill">HTML</span>
+              <span class="tech-pill">CSS</span>
+              <span class="tech-pill">JavaScript (Vanilla)</span>
+            </div>
+            <div class="features-heading">Key Features</div>
+            <ul class="feature-list">
+              <li>Product showcase grid with 6 categories</li>
+              <li>Scroll-reveal animations (IntersectionObserver)</li>
+              <li>Responsive hamburger mobile menu</li>
+              <li>Elegant serif/sans typography pairing</li>
+              <li>Contact form with feedback</li>
+            </ul>
+            <div class="project-status">
+              <span class="status-badge status-production">Case Study</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 8: Trading Opportunity Scanner
+           ============================================================ -->
+      <section>
+        <div class="project-slide">
+          <div class="project-left">
+            <h2>Trading Opportunity Scanner</h2>
+            <span class="category-badge">Investment / Trading</span>
+            <p>A multi-asset investment research tool that automates discovery and validation of trading opportunities with technical analysis and backtesting across US and Indian markets.</p>
+          </div>
+          <div class="project-right">
+            <div class="tech-stack">
+              <span class="tech-pill">Nx Monorepo</span>
+              <span class="tech-pill">FastAPI</span>
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">NumPy</span>
+              <span class="tech-pill">Polygon.io</span>
+              <span class="tech-pill">Finnhub</span>
+            </div>
+            <div class="features-heading">Key Features</div>
+            <ul class="feature-list">
+              <li>Technical indicators: SMA, EMA, MACD, RSI, Bollinger Bands</li>
+              <li>Backtesting engine for strategy validation</li>
+              <li>Multi-asset: US equities, India NSE, options, FX</li>
+              <li>Multiple data feeds: Polygon.io, Finnhub, NSEPython</li>
+              <li>16 pre-built scan templates</li>
+            </ul>
+            <div class="project-status">
+              <span class="status-badge status-development">Proof of Concept</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 9: Compliance Tracker
+           ============================================================ -->
+      <section>
+        <div class="project-slide">
+          <div class="project-left">
+            <h2>Compliance Tracker</h2>
+            <span class="category-badge">FinTech / SaaS</span>
+            <p>A full-stack SaaS demonstration that shows how startups can manage compliance requirements. Auto-matches applicable regulations based on company profile and provides task management, dashboard metrics, and audit trails.</p>
+          </div>
+          <div class="project-right">
+            <div class="tech-stack">
+              <span class="tech-pill">Express</span>
+              <span class="tech-pill">React 18</span>
+              <span class="tech-pill">TypeScript</span>
+              <span class="tech-pill">Prisma</span>
+              <span class="tech-pill">PostgreSQL</span>
+              <span class="tech-pill">Tailwind CSS</span>
+              <span class="tech-pill">Zustand</span>
+            </div>
+            <div class="features-heading">Key Features</div>
+            <ul class="feature-list">
+              <li>Auto-compliance matching by jurisdiction</li>
+              <li>Task management with assignment tracking</li>
+              <li>Dashboard with KPI metrics &amp; compliance score</li>
+              <li>Role-based access control (RBAC)</li>
+              <li>Multi-tenant with company-scoped isolation</li>
+            </ul>
+            <div class="project-status">
+              <span class="status-badge status-prototype">Showcase</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 10: KYC Partner Starter
+           ============================================================ -->
+      <section>
+        <div class="project-slide">
+          <div class="project-left">
+            <h2>KYC Partner Starter</h2>
+            <span class="category-badge">Mobile / Template</span>
+            <p>A pre-configured Expo React Native project scaffold designed as a foundation for building KYC partner verification applications. Provides a clean starting point with TypeScript strict mode and cross-platform support.</p>
+          </div>
+          <div class="project-right">
+            <div class="tech-stack">
+              <span class="tech-pill">Expo</span>
+              <span class="tech-pill">React Native</span>
+              <span class="tech-pill">TypeScript</span>
+            </div>
+            <div class="features-heading">Key Features</div>
+            <ul class="feature-list">
+              <li>Ready-to-use Expo scaffold</li>
+              <li>TypeScript strict mode configuration</li>
+              <li>Cross-platform: iOS, Android, Web</li>
+              <li>Ready for KYC feature integration</li>
+            </ul>
+            <div class="project-status">
+              <span class="status-badge status-template">Starter Kit</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 11: Kavya — Poetry Translator
+           ============================================================ -->
+      <section>
+        <div class="project-slide">
+          <div class="project-left">
+            <h2>Kavya &mdash; Poetry Translator</h2>
+            <span class="category-badge">AI / NLP</span>
+            <p>An AI-powered cross-platform app that translates and interprets Tamil, Hindi, and Sanskrit poetry using Claude AI. Supports multiple input methods and provides rich scholarly context alongside translations.</p>
+          </div>
+          <div class="project-right">
+            <div class="tech-stack">
+              <span class="tech-pill">Expo</span>
+              <span class="tech-pill">React Native</span>
+              <span class="tech-pill">Claude AI (Haiku)</span>
+              <span class="tech-pill">Supabase</span>
+              <span class="tech-pill">TypeScript</span>
+            </div>
+            <div class="features-heading">Key Features</div>
+            <ul class="feature-list">
+              <li>4 input methods: text, camera, voice, clipboard</li>
+              <li>Claude AI translation with structured output</li>
+              <li>Line-by-line literal + poetic interpretation</li>
+              <li>Hindi (Devanagari) and modern Tamil translations</li>
+              <li>Scholarly context with literary analysis</li>
+            </ul>
+            <div class="project-status">
+              <span class="status-badge status-production">Case Study</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 12: Technology Stack
+           ============================================================ -->
+      <section>
+        <div class="section-heading">
+          <h2>Technology Stack</h2>
+          <div class="heading-underline"></div>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-group">
+            <h4>Languages</h4>
+            <div class="tech-stack">
+              <span class="tech-pill">TypeScript</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">HTML/CSS</span>
+            </div>
+          </div>
+          <div class="tech-group">
+            <h4>Frontend</h4>
+            <div class="tech-stack">
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">Tailwind CSS</span>
+              <span class="tech-pill">Vite</span>
+            </div>
+          </div>
+          <div class="tech-group">
+            <h4>Mobile</h4>
+            <div class="tech-stack">
+              <span class="tech-pill">React Native</span>
+              <span class="tech-pill">Expo</span>
+              <span class="tech-pill">Expo Router</span>
+            </div>
+          </div>
+          <div class="tech-group">
+            <h4>Backend</h4>
+            <div class="tech-stack">
+              <span class="tech-pill">FastAPI</span>
+              <span class="tech-pill">Express</span>
+              <span class="tech-pill">Node.js</span>
+            </div>
+          </div>
+          <div class="tech-group">
+            <h4>Database</h4>
+            <div class="tech-stack">
+              <span class="tech-pill">Supabase</span>
+              <span class="tech-pill">PostgreSQL</span>
+              <span class="tech-pill">Prisma</span>
+              <span class="tech-pill">SQLite</span>
+            </div>
+          </div>
+          <div class="tech-group">
+            <h4>DevOps</h4>
+            <div class="tech-stack">
+              <span class="tech-pill">Docker</span>
+              <span class="tech-pill">GitHub Actions</span>
+              <span class="tech-pill">Nx</span>
+            </div>
+          </div>
+          <div class="tech-group tech-group-wide">
+            <h4>APIs &amp; AI</h4>
+            <div class="tech-stack">
+              <span class="tech-pill">Claude AI</span>
+              <span class="tech-pill">Companies House</span>
+              <span class="tech-pill">OpenSanctions</span>
+              <span class="tech-pill">Polygon.io</span>
+              <span class="tech-pill">Finnhub</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 13: Architecture Patterns
+           ============================================================ -->
+      <section>
+        <div class="section-heading">
+          <h2>Architecture &amp; Patterns</h2>
+          <div class="heading-underline"></div>
+        </div>
+        <div class="patterns-grid">
+          <div class="pattern-item">
+            <div class="pattern-icon">1</div>
+            <div class="pattern-text">Offline-first mobile apps with embedded data</div>
+          </div>
+          <div class="pattern-item">
+            <div class="pattern-icon">2</div>
+            <div class="pattern-text">Full-stack REST APIs with typed contracts</div>
+          </div>
+          <div class="pattern-item">
+            <div class="pattern-icon">3</div>
+            <div class="pattern-text">Monorepo with shared types and auto-generated clients</div>
+          </div>
+          <div class="pattern-item">
+            <div class="pattern-icon">4</div>
+            <div class="pattern-text">AI integration via Claude API with structured prompts</div>
+          </div>
+          <div class="pattern-item">
+            <div class="pattern-icon">5</div>
+            <div class="pattern-text">Multi-tenant SaaS with role-based access</div>
+          </div>
+          <div class="pattern-item">
+            <div class="pattern-icon">6</div>
+            <div class="pattern-text">OCR document processing pipelines</div>
+          </div>
+          <div class="pattern-item" style="grid-column: span 2; max-width: 50%; margin: 0 auto;">
+            <div class="pattern-icon">7</div>
+            <div class="pattern-text">Real-time risk scoring algorithms</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 14: Domain Expertise
+           ============================================================ -->
+      <section>
+        <div class="section-heading">
+          <h2>Domain Expertise</h2>
+          <div class="heading-underline"></div>
+        </div>
+        <div class="domain-grid">
+          <div class="domain-card">
+            <div class="domain-icon purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/></svg>
+            </div>
+            <h3>Cultural Heritage &amp; Preservation</h3>
+          </div>
+          <div class="domain-card">
+            <div class="domain-icon green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00e882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Financial Compliance &amp; KYC</h3>
+          </div>
+          <div class="domain-card">
+            <div class="domain-icon yellow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>International Trade</h3>
+          </div>
+          <div class="domain-card">
+            <div class="domain-icon purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Investment &amp; Trading</h3>
+          </div>
+          <div class="domain-card">
+            <div class="domain-icon green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00e882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </div>
+            <h3>E-Commerce &amp; Branding</h3>
+          </div>
+          <div class="domain-card">
+            <div class="domain-icon yellow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>AI/NLP &amp; Language Technology</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 15: Key Metrics
+           ============================================================ -->
+      <section>
+        <div class="section-heading">
+          <h2>By The Numbers</h2>
+          <div class="heading-underline"></div>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value">108 temples catalogued with 158 verse combinations</div>
+            <div class="metric-context">DivyaDesam Explorer</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">8-step KYC wizard across 3 jurisdictions</div>
+            <div class="metric-context">KYC Partner Verification</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">UCP600 compliance rules engine with OCR</div>
+            <div class="metric-context">LC Compliance Checker</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">16 technical indicator scan templates</div>
+            <div class="metric-context">Trading Opportunity Scanner</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">4 input methods with Claude AI translation</div>
+            <div class="metric-context">Kavya &mdash; Poetry Translator</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">15+ database models in compliance tracker</div>
+            <div class="metric-context">Compliance Tracker</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 16: Contact / Thank You
+           ============================================================ -->
+      <section class="contact-slide">
+        <h2>Let's Build <span class="text-gradient">Something Together</span></h2>
+        <div class="title-divider"></div>
+        <p>Impressed by what you see? Let's discuss how we can build a similar solution tailored to your business.</p>
+        <br>
+        <a href="https://www.calendly.com/lsgoplaan" target="_blank" rel="noopener noreferrer" class="contact-link">Schedule a Demo &rarr;</a>
+        <div class="contact-brand" style="margin-top: 1.5em;">JSK AI Automation &amp; Digital Solutions</div>
+      </section>
+
+    </div><!-- /.slides -->
+  </div><!-- /.reveal -->
+
+  <!-- Reveal.js v5 -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      transition: 'fade',
+      backgroundTransition: 'fade',
+      width: 1200,
+      height: 700,
+      margin: 0.1,
+    });
+  </script>
+</body>
+</html>
