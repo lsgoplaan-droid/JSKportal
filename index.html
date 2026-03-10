@@ -123,6 +123,7 @@
       border: none;
       transition: all .2s ease;
       white-space: nowrap;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .btn-dark {
@@ -271,14 +272,15 @@
       flex-direction: column;
       justify-content: center;
       gap: 5px;
-      width: 36px;
-      height: 36px;
+      width: 44px;
+      height: 44px;
       background: none;
       border: none;
       cursor: pointer;
-      padding: 6px;
+      padding: 8px;
       border-radius: 6px;
       transition: background .2s;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .hamburger:hover {
@@ -333,9 +335,11 @@
       font-size: 17px;
       font-weight: 600;
       color: var(--text);
-      padding: 14px 16px;
+      padding: 16px 16px;
+      min-height: 48px;
       border-radius: var(--radius-sm);
       transition: background .2s;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .mobile-menu a:hover,
@@ -967,7 +971,7 @@
     }
 
     .pf-filter-btn {
-      padding: 7px 18px;
+      padding: 10px 18px;
       border-radius: 100px;
       font-size: 13px;
       font-weight: 600;
@@ -976,6 +980,7 @@
       color: var(--text-2);
       cursor: pointer;
       transition: all .2s;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .pf-filter-btn:hover {
@@ -1125,6 +1130,7 @@
 
     .faq-list {
       max-width: 720px;
+      width: 100%;
       margin: 0 auto;
     }
 
@@ -1139,6 +1145,7 @@
       justify-content: space-between;
       gap: 16px;
       padding: 22px 0;
+      min-height: 48px;
       background: none;
       border: none;
       cursor: pointer;
@@ -1148,6 +1155,7 @@
       font-weight: 600;
       color: var(--text);
       transition: color .2s;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .faq-q:hover {
@@ -1453,8 +1461,8 @@
     }
 
     .social-btn {
-      width: 36px;
-      height: 36px;
+      width: 44px;
+      height: 44px;
       border-radius: var(--radius-sm);
       background: rgba(255, 255, 255, .07);
       display: flex;
@@ -1464,6 +1472,7 @@
       font-weight: 700;
       color: rgba(255, 255, 255, .6);
       transition: background .2s, color .2s;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .social-btn:hover {
@@ -1627,7 +1636,8 @@
       .services,
       .how,
       .about,
-      .industries {
+      .industries,
+      .portfolio {
         padding: 72px 24px;
       }
 
@@ -1712,7 +1722,8 @@
       .services,
       .how,
       .about,
-      .industries {
+      .industries,
+      .portfolio {
         padding: 56px 16px;
       }
 
@@ -1881,13 +1892,71 @@
       }
 
       nav {
-        padding-left: calc(32px + env(safe-area-inset-left));
-        padding-right: calc(32px + env(safe-area-inset-right));
+        padding-left: max(32px, env(safe-area-inset-left));
+        padding-right: max(32px, env(safe-area-inset-right));
+      }
+
+      .chat-fab,
+      .wa-float {
+        right: calc(28px + env(safe-area-inset-right));
+        bottom: calc(28px + env(safe-area-inset-bottom));
+      }
+
+      .chat-fab {
+        bottom: calc(100px + env(safe-area-inset-bottom));
+      }
+
+      .chat-window {
+        bottom: calc(170px + env(safe-area-inset-bottom));
+        right: calc(28px + env(safe-area-inset-right));
       }
     }
 
     /* Very small phones */
     @media (max-width: 380px) {
+      .hero {
+        padding: 100px 12px 40px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+        letter-spacing: -0.8px;
+      }
+
+      .hero-sub {
+        font-size: 14px;
+      }
+
+      .container,
+      nav,
+      .logos-bar {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .services,
+      .how,
+      .about,
+      .industries,
+      .why-section,
+      .faq,
+      .portfolio {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .cta-section {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .cta-box {
+        padding: 36px 16px;
+      }
+
+      .section-title {
+        font-size: 22px;
+      }
 
       .logos-row {
         gap: 12px;
@@ -1898,8 +1967,93 @@
         gap: 4px;
       }
 
+      .founder-card {
+        padding: 24px 16px;
+      }
+
       .founder-tags {
         gap: 6px;
+      }
+
+      .founder-avatar {
+        width: 72px;
+        height: 72px;
+        font-size: 26px;
+      }
+
+      .svc-card {
+        padding: 20px;
+      }
+
+      .hcard {
+        padding: 18px;
+      }
+
+      footer {
+        padding: 40px 12px 28px;
+      }
+    }
+
+    /* ─── TOUCH DEVICE OVERRIDES ───────────────────────── */
+    @media (hover: none) and (pointer: coarse) {
+      /* Disable hover transforms on touch — they stick on tap */
+      .pf-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-card);
+      }
+
+      .tier-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-card);
+      }
+
+      .ind-card:hover {
+        transform: none;
+      }
+
+      .btn-dark:hover,
+      .btn-green:hover,
+      .btn-outline:hover {
+        transform: none;
+      }
+
+      /* Use active states instead for touch feedback */
+      .btn-dark:active {
+        transform: scale(0.98);
+      }
+
+      .btn-green:active {
+        transform: scale(0.98);
+      }
+
+      .pf-card:active {
+        transform: scale(0.99);
+      }
+
+      .tier-card:active {
+        transform: scale(0.99);
+      }
+
+      .ind-card:active {
+        transform: scale(0.99);
+      }
+
+      /* Make logo pills visible without hover */
+      .logo-pill {
+        opacity: .7;
+      }
+    }
+
+    /* ─── iOS SPECIFIC FIXES ───────────────────────────── */
+    /* Prevent iOS zoom on input focus (font-size < 16px triggers zoom) */
+    @media screen and (max-width: 600px) {
+      .chat-input {
+        font-size: 16px;
+      }
+
+      /* Prevent elastic overscroll on iOS when mobile menu is open */
+      .mobile-menu.open {
+        overscroll-behavior: contain;
       }
     }
   </style>
@@ -3020,13 +3174,14 @@
       background: var(--purple-soft);
       color: var(--purple);
       border: none;
-      padding: 6px 12px;
+      padding: 10px 14px;
       border-radius: 20px;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 500;
       cursor: pointer;
       transition: background 0.2s;
       font-family: inherit;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .chat-suggest-btn:hover {
@@ -3111,9 +3266,24 @@
       .chat-window {
         bottom: 0;
         right: 0;
+        left: 0;
+        top: 0;
         width: 100%;
         height: 100%;
         border-radius: 0;
+      }
+
+      .chat-input-area {
+        padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .chat-powered {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+
+      .chat-suggestions {
+        gap: 8px;
+        padding: 0 12px 10px;
       }
     }
   </style>
