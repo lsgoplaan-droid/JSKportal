@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jskai.netlify.app/sitemap.xml
+Sitemap: https://jskai.ai/sitemap.xml
