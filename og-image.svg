@@ -1,0 +1,38 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0e0e22"/>
+      <stop offset="100%" style="stop-color:#1a1245"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="45%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="100" r="300" fill="#6366f1" opacity="0.08"/>
+  <!-- Logo mark -->
+  <rect x="80" y="60" width="56" height="56" rx="12" fill="url(#accent)"/>
+  <text x="108" y="97" font-family="Inter,system-ui,sans-serif" font-size="20" font-weight="900" fill="white" text-anchor="middle">JSK</text>
+  <!-- Brand name -->
+  <text x="150" y="85" font-family="Inter,system-ui,sans-serif" font-size="24" font-weight="800" fill="white">JSK <tspan fill="#6366f1">AI</tspan></text>
+  <text x="150" y="105" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="500" fill="rgba(255,255,255,0.4)">Just ask</text>
+  <!-- Main headline -->
+  <text x="80" y="240" font-family="Inter,system-ui,sans-serif" font-size="58" font-weight="900" fill="white" letter-spacing="-2">The Next Gen Is Leveraging</text>
+  <text x="80" y="310" font-family="Inter,system-ui,sans-serif" font-size="58" font-weight="900" fill="url(#accent)" letter-spacing="-2">AI Agents. Are You?</text>
+  <!-- Subtitle -->
+  <text x="80" y="370" font-family="Inter,system-ui,sans-serif" font-size="22" fill="rgba(255,255,255,0.55)">AI Automation &amp; Digital Solutions for MSMEs</text>
+  <!-- CTA bar -->
+  <rect x="80" y="420" width="340" height="52" rx="10" fill="#00e882"/>
+  <text x="250" y="453" font-family="Inter,system-ui,sans-serif" font-size="17" font-weight="700" fill="#0a0a12" text-anchor="middle">Book Free AI Discovery Call →</text>
+  <!-- Chips -->
+  <rect x="80" y="510" width="160" height="36" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+  <text x="160" y="534" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.7)" text-anchor="middle">🤖 AI Agents</text>
+  <rect x="256" y="510" width="180" height="36" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+  <text x="346" y="534" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.7)" text-anchor="middle">⚙️ Automation</text>
+  <rect x="452" y="510" width="190" height="36" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+  <text x="547" y="534" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.7)" text-anchor="middle">💬 AI Chatbots</text>
+  <!-- URL -->
+  <text x="80" y="600" font-family="Inter,system-ui,sans-serif" font-size="15" font-weight="500" fill="rgba(255,255,255,0.3)">jskai.netlify.app</text>
+</svg>
