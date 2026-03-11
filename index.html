@@ -1183,6 +1183,98 @@
       margin-top: 48px;
     }
 
+    /* ─── DEMOS ──────────────────────────────────────── */
+    .demos {
+      padding: 100px 32px;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .demo-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .demo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+    }
+
+    .demo-banner {
+      padding: 32px 24px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .demo-banner-icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .demo-banner h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .demo-banner p {
+      font-size: 13px;
+      opacity: 0.75;
+    }
+
+    .demo-body {
+      padding: 24px;
+    }
+
+    .demo-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+    }
+
+    .demo-features li {
+      font-size: 14px;
+      color: var(--text-2);
+      padding: 6px 0 6px 24px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .demo-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .demo-quote {
+      font-size: 13px;
+      color: var(--text-3);
+      font-style: italic;
+      padding: 12px 16px;
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      margin-bottom: 20px;
+      border-left: 3px solid var(--purple);
+    }
+
+    .demo-cta {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+
     /* ─── FAQ ─────────────────────────────────────────── */
     .faq {
       padding: 100px 32px;
@@ -1251,7 +1343,7 @@
     }
 
     .faq-item.open .faq-a {
-      max-height: 300px;
+      max-height: 800px;
       padding-bottom: 22px;
     }
 
@@ -1667,6 +1759,16 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .demo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .demo-grid .demo-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
       .cta-box {
         padding: 56px 36px;
       }
@@ -1699,7 +1801,8 @@
       .how,
       .about,
       .industries,
-      .portfolio {
+      .portfolio,
+      .demos {
         padding: 72px 24px;
       }
 
@@ -1785,13 +1888,23 @@
       .how,
       .about,
       .industries,
-      .portfolio {
+      .portfolio,
+      .demos {
         padding: 56px 16px;
       }
 
       .why-section,
       .faq {
         padding: 56px 16px;
+      }
+
+      .demo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .demo-grid .demo-card:last-child {
+        grid-column: auto;
+        max-width: none;
       }
 
       .cta-section {
@@ -2137,6 +2250,7 @@
       <li><a href="#how">How It Works</a></li>
       <li><a href="#industries">Industries</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#demos">Demos</a></li>
       <li><a href="#why">Why Us</a></li>
       <li><a href="#about">About Us</a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -2160,6 +2274,7 @@
     <a href="#how" class="mobile-nav-link">How It Works</a>
     <a href="#industries" class="mobile-nav-link">Industries</a>
     <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
+    <a href="#demos" class="mobile-nav-link">Demos</a>
     <a href="#why" class="mobile-nav-link">Why Us</a>
     <a href="#about" class="mobile-nav-link">About Us</a>
     <a href="#faq" class="mobile-nav-link">FAQ</a>
@@ -2249,6 +2364,78 @@
       <p class="logos-label">AI-Native — Powered by the world's leading models &amp; frameworks</p>
     </div>
   </div>
+
+  <!-- ═══ LIVE DEMOS ═════════════════════════════════════ -->
+  <section class="demos" id="demos">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center;display:flex;flex-direction:column;align-items:center;">
+        <div class="section-tag">See It In Action</div>
+        <h2 class="section-title">AI Agents built for<br>real businesses</h2>
+        <p class="section-sub">Industry-specific AI assistants that handle enquiries, capture leads, and book appointments 24/7 — so you never miss a customer.</p>
+      </div>
+
+      <div class="demo-grid reveal">
+        <!-- Legal -->
+        <div class="demo-card">
+          <div class="demo-banner" style="background:linear-gradient(135deg,#1a365d,#0f2440)">
+            <div class="demo-banner-icon">&#9878;</div>
+            <h3>Legal Intake Assistant</h3>
+            <p>For law firms &amp; legal practices</p>
+          </div>
+          <div class="demo-body">
+            <ul class="demo-features">
+              <li>Screens legal matters by type, jurisdiction &amp; urgency</li>
+              <li>Qualifies potential clients 24/7 — even at 2am</li>
+              <li>Sends structured intake brief to your inbox instantly</li>
+            </ul>
+            <div class="demo-quote">"We used to miss 40% of website enquiries. Now every one gets screened and forwarded."</div>
+            <a href="#cta" class="btn btn-dark demo-cta">Request a Live Demo &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Renovation -->
+        <div class="demo-card">
+          <div class="demo-banner" style="background:linear-gradient(135deg,#2d5016,#1a3009)">
+            <div class="demo-banner-icon">&#127968;</div>
+            <h3>Renovation Quote Assistant</h3>
+            <p>For interior designers &amp; contractors</p>
+          </div>
+          <div class="demo-body">
+            <ul class="demo-features">
+              <li>Scopes renovation projects — property type, rooms, budget</li>
+              <li>Provides rough cost estimates based on SG pricing</li>
+              <li>Captures project brief for your design team to follow up</li>
+            </ul>
+            <div class="demo-quote">"Homeowners get instant estimates and we get qualified leads with full project details."</div>
+            <a href="#cta" class="btn btn-dark demo-cta">Request a Live Demo &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Beauty -->
+        <div class="demo-card">
+          <div class="demo-banner" style="background:linear-gradient(135deg,#7c2d72,#4a1942)">
+            <div class="demo-banner-icon">&#10024;</div>
+            <h3>Beauty &amp; Wellness Advisor</h3>
+            <p>For salons, spas &amp; clinics</p>
+          </div>
+          <div class="demo-body">
+            <ul class="demo-features">
+              <li>Recommends treatments based on customer concerns</li>
+              <li>Answers pricing &amp; availability questions instantly</li>
+              <li>Captures booking requests — confirmed via WhatsApp</li>
+            </ul>
+            <div class="demo-quote">"Our booking rate went up because customers can explore and book at any hour."</div>
+            <a href="#cta" class="btn btn-dark demo-cta">Request a Live Demo &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-bottom reveal" style="text-align:center;margin-top:40px;">
+        <p style="color:var(--text-2);font-size:15px;margin-bottom:16px;">Don't see your industry? We build custom AI agents for any business.</p>
+        <a href="#cta" class="btn btn-outline btn-lg">Book a Free AI Discovery Call &rarr;</a>
+      </div>
+    </div>
+  </section>
 
   <!-- ═══ SERVICES / SOLUTIONS ════════════════════════════ -->
   <section class="services" id="services">
@@ -2810,6 +2997,34 @@
             <p>Yes. We integrate with 200+ platforms including Salesforce, SAP, Microsoft 365, Google Workspace, Slack,
               and more. If your tool has an API, we can connect to it. We build on top of your existing stack — no
               rip-and-replace.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            Can you build an AI agent to automate tasks for my business?
+            <span class="faq-chevron">&#9662;</span>
+          </button>
+          <div class="faq-a">
+            <p>Yes — that's our specialty. We build custom AI agents tailored to your business: handling customer enquiries 24/7, qualifying leads, booking appointments, answering FAQs, processing documents, and more. Each agent is trained on your specific services, pricing, and workflows. We build agents for industries like legal, renovation, beauty &amp; wellness, and many more — and we can build one for your industry too. Start with a free discovery call and we'll scope what's possible.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            What about back-office tasks like spreadsheets, emails, and data reconciliation?
+            <span class="faq-chevron">&#9662;</span>
+          </button>
+          <div class="faq-a">
+            <p>Those are exactly the tasks that can either be completely eliminated or fully automated. Here are real examples of what our AI agents can handle:</p>
+            <ul style="margin:12px 0;padding-left:20px;color:var(--text-2);line-height:1.8;">
+              <li><strong>Invoice Reconciliation</strong> — Supplier emails an invoice PDF → AI reads it, extracts line items, matches against your Purchase Order spreadsheet, flags mismatches (wrong qty, price difference), and updates your tracker automatically.</li>
+              <li><strong>Email-to-Spreadsheet for Orders</strong> — Customer orders arrive via email → AI extracts product, qty, delivery date, and customer details → populates your Google Sheet or Excel tracker → sends an auto-acknowledgement email.</li>
+              <li><strong>Daily Sales Reporting</strong> — Your POS system exports data daily → AI reconciles it against inventory, calculates margins, generates a summary report, and emails it to you by 8am every morning.</li>
+              <li><strong>Accounts Receivable Follow-Up</strong> — AI scans your receivables spreadsheet daily, identifies overdue invoices, sends personalised reminder emails at 30/60/90 days, and updates the status when payment is received.</li>
+              <li><strong>Supplier Quote Comparison</strong> — You receive quotes from multiple suppliers via email → AI extracts pricing, delivery terms, and MOQ from each PDF → populates a side-by-side comparison sheet and highlights the best option.</li>
+              <li><strong>HR Leave &amp; Expense Processing</strong> — Staff submit requests via email or WhatsApp → AI reads them, checks leave balances, updates the calendar, and sends approval notifications — no manual data entry needed.</li>
+            </ul>
+            <p>If your team is doing repetitive data work today, there's a very good chance we can automate 80–100% of it. Book a discovery call and walk us through your workflow — we'll tell you exactly what can be automated and what the ROI looks like.</p>
           </div>
         </div>
       </div>
