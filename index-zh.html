@@ -1183,6 +1183,98 @@
       margin-top: 48px;
     }
 
+    /* ─── DEMOS ──────────────────────────────────────── */
+    .demos {
+      padding: 100px 32px;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .demo-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .demo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+    }
+
+    .demo-banner {
+      padding: 32px 24px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .demo-banner-icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .demo-banner h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .demo-banner p {
+      font-size: 13px;
+      opacity: 0.75;
+    }
+
+    .demo-body {
+      padding: 24px;
+    }
+
+    .demo-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+    }
+
+    .demo-features li {
+      font-size: 14px;
+      color: var(--text-2);
+      padding: 6px 0 6px 24px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .demo-features li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .demo-quote {
+      font-size: 13px;
+      color: var(--text-3);
+      font-style: italic;
+      padding: 12px 16px;
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      margin-bottom: 20px;
+      border-left: 3px solid var(--purple);
+    }
+
+    .demo-cta {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+
     /* ─── FAQ ─────────────────────────────────────────── */
     .faq {
       padding: 100px 32px;
@@ -1251,7 +1343,7 @@
     }
 
     .faq-item.open .faq-a {
-      max-height: 300px;
+      max-height: 800px;
       padding-bottom: 22px;
     }
 
@@ -1667,6 +1759,16 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .demo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .demo-grid .demo-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
       .cta-box {
         padding: 56px 36px;
       }
@@ -1699,7 +1801,8 @@
       .how,
       .about,
       .industries,
-      .portfolio {
+      .portfolio,
+      .demos {
         padding: 72px 24px;
       }
 
@@ -1785,8 +1888,18 @@
       .how,
       .about,
       .industries,
-      .portfolio {
+      .portfolio,
+      .demos {
         padding: 56px 16px;
+      }
+
+      .demo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .demo-grid .demo-card:last-child {
+        grid-column: auto;
+        max-width: none;
       }
 
       .why-section,
@@ -2137,6 +2250,7 @@
       <li><a href="#how">流程</a></li>
       <li><a href="#industries">行业</a></li>
       <li><a href="#portfolio">案例</a></li>
+      <li><a href="#demos">演示</a></li>
       <li><a href="#why">优势</a></li>
       <li><a href="#about">关于我们</a></li>
       <li><a href="#faq">常见问题</a></li>
@@ -2160,6 +2274,7 @@
     <a href="#how" class="mobile-nav-link">流程</a>
     <a href="#industries" class="mobile-nav-link">行业</a>
     <a href="#portfolio" class="mobile-nav-link">案例</a>
+    <a href="#demos" class="mobile-nav-link">演示</a>
     <a href="#why" class="mobile-nav-link">优势</a>
     <a href="#about" class="mobile-nav-link">关于我们</a>
     <a href="#faq" class="mobile-nav-link">常见问题</a>
@@ -2247,6 +2362,78 @@
       <p class="logos-label">AI 原生——由全球领先的模型与框架驱动</p>
     </div>
   </div>
+
+  <!-- ═══ LIVE DEMOS ═════════════════════════════════════ -->
+  <section class="demos" id="demos">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center;display:flex;flex-direction:column;align-items:center;">
+        <div class="section-tag">实际演示</div>
+        <h2 class="section-title">为真实企业打造的<br>AI 智能体</h2>
+        <p class="section-sub">行业专属的 AI 助手，全天候处理咨询、获取潜在客户、预约排期——让您不再错过任何客户。</p>
+      </div>
+
+      <div class="demo-grid reveal">
+        <!-- Legal -->
+        <div class="demo-card">
+          <div class="demo-banner" style="background:linear-gradient(135deg,#1a365d,#0f2440)">
+            <div class="demo-banner-icon">&#9878;</div>
+            <h3>法律咨询助手</h3>
+            <p>适用于律师事务所与法律服务</p>
+          </div>
+          <div class="demo-body">
+            <ul class="demo-features">
+              <li>按案件类型、管辖区和紧急程度筛选法律事务</li>
+              <li>全天候接待潜在客户——即使凌晨 2 点</li>
+              <li>即时发送结构化咨询摘要至您的邮箱</li>
+            </ul>
+            <div class="demo-quote">"我们以前错过 40% 的网站咨询。现在每一条都会被筛选和转发。"</div>
+            <a href="#cta" class="btn btn-dark demo-cta">申请现场演示 &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Renovation -->
+        <div class="demo-card">
+          <div class="demo-banner" style="background:linear-gradient(135deg,#2d5016,#1a3009)">
+            <div class="demo-banner-icon">&#127968;</div>
+            <h3>装修报价助手</h3>
+            <p>适用于室内设计师与装修承包商</p>
+          </div>
+          <div class="demo-body">
+            <ul class="demo-features">
+              <li>了解装修项目范围——房型、房间、预算</li>
+              <li>基于新加坡市场价格提供粗略估算</li>
+              <li>获取完整项目简报供设计团队跟进</li>
+            </ul>
+            <div class="demo-quote">"业主获得即时估算，我们获得带完整项目详情的合格线索。"</div>
+            <a href="#cta" class="btn btn-dark demo-cta">申请现场演示 &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Beauty -->
+        <div class="demo-card">
+          <div class="demo-banner" style="background:linear-gradient(135deg,#7c2d72,#4a1942)">
+            <div class="demo-banner-icon">&#10024;</div>
+            <h3>美容健康顾问</h3>
+            <p>适用于美容院、水疗中心与诊所</p>
+          </div>
+          <div class="demo-body">
+            <ul class="demo-features">
+              <li>根据客户需求推荐合适的护理项目</li>
+              <li>即时回答价格和预约问题</li>
+              <li>获取预约请求——通过 WhatsApp 确认</li>
+            </ul>
+            <div class="demo-quote">"预约率提升了，因为客户可以随时浏览和预约。"</div>
+            <a href="#cta" class="btn btn-dark demo-cta">申请现场演示 &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-bottom reveal" style="text-align:center;margin-top:40px;">
+        <p style="color:var(--text-2);font-size:15px;margin-bottom:16px;">没看到您的行业？我们可以为任何业务定制 AI 智能体。</p>
+        <a href="#cta" class="btn btn-outline btn-lg">预约免费 AI 探索电话 &rarr;</a>
+      </div>
+    </div>
+  </section>
 
   <!-- ═══ SERVICES / SOLUTIONS ════════════════════════════ -->
   <section class="services" id="services">
@@ -2445,8 +2632,8 @@
     <div class="container">
       <div class="section-header reveal" style="text-align:center;display:flex;flex-direction:column;align-items:center;">
         <div class="section-tag">项目案例</div>
-        <h2 class="section-title">数字劳动力与 AI 智能体<br>在真实世界中的部署</h2>
-        <p class="section-sub">从自动化合规的 AI 智能体到运行您运营的数字员工——了解我们如何为中小微企业部署智能自动化。</p>
+        <h2 class="section-title">我们的能力：<br>AI 智能体与数字解决方案</h2>
+        <p class="section-sub">从自动化合规的 AI 智能体到简化运营的数字方案——探索我们的能力，了解我们能为您构建什么。</p>
       </div>
 
       <div class="pf-filter reveal">
@@ -2469,9 +2656,9 @@
               </div>
             </div>
             <h3>LC 合规检查器</h3>
-            <p class="pf-desc">AI 驱动的数字劳动力，取代数小时的人工文档审查——自主智能体通过 OCR 提取验证信用证文档是否符合 UCP600 规则。</p>
+            <p class="pf-desc">AI 驱动的智能体，可取代数小时的人工文档审查——通过 OCR 提取验证信用证文档是否符合 UCP600 规则。</p>
             <ul class="pf-features">
-              <li>AI 智能体自动完成贸易运营团队数小时的工作</li>
+              <li>自动完成贸易运营团队数小时的工作</li>
               <li>PDF 提取，扫描文档支持 OCR 回退</li>
               <li>模糊匹配引擎进行字段比对</li>
               <li>按严重程度分级的合规报告——无需人工审查</li>
@@ -2483,8 +2670,8 @@
               <span class="pf-tag">OCR</span>
             </div>
             <div class="pf-status">
-              <span class="pf-dot" style="background:var(--green)"></span>
-              <span style="color:var(--green)">案例研究</span>
+              <span class="pf-dot" style="background:var(--purple)"></span>
+              <span style="color:var(--purple)">展示项目</span>
               <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— 可提供演示</span>
             </div>
           </div>
@@ -2500,7 +2687,7 @@
               </div>
             </div>
             <h3>交易机会扫描器</h3>
-            <p class="pf-desc">全天候扫描多资产市场的自主 AI 智能体——您的数字分析师，在您休息时发现交易机会、运行技术分析并回测策略。</p>
+            <p class="pf-desc">全天候扫描多资产市场的 AI 智能体——您的数字分析师，发现交易机会、运行技术分析并回测策略。</p>
             <ul class="pf-features">
               <li>AI 智能体自主监控市场并发现机会</li>
               <li>技术指标：SMA、EMA、MACD、RSI、布林带</li>
@@ -2531,7 +2718,7 @@
               </div>
             </div>
             <h3>Shreyati Creations</h3>
-            <p class="pf-desc">为中小微企业打造的端到端数字形象——手工珠宝品牌展示网站，设计并部署完成，让店主专注于她的手艺。</p>
+            <p class="pf-desc">为中小微企业打造的端到端数字形象——手工珠宝品牌展示网站，设计并交付完成，让店主专注于她的手艺。</p>
             <ul class="pf-features">
               <li>为中小微企业提供完整的网站设计、开发与部署</li>
               <li>6 个类别的产品展示网格</li>
@@ -2561,9 +2748,9 @@
               </div>
             </div>
             <h3>KYC 合作伙伴验证</h3>
-            <p class="pf-desc">AI 驱动的合作伙伴尽职调查数字劳动力——自主智能体处理多管辖区合规筛查、公司验证和风险评分。</p>
+            <p class="pf-desc">AI 驱动的合作伙伴尽职调查方案——处理多管辖区合规筛查、公司验证和风险评分。</p>
             <ul class="pf-features">
-              <li>AI 智能体自动化 8 步 KYC 验证工作流</li>
+              <li>自动化 8 步 KYC 验证工作流</li>
               <li>多管辖区——英国、新加坡、印度</li>
               <li>通过 OpenSanctions 进行制裁与政治敏感人物筛查</li>
               <li>6 个加权因子的自动化风险评分</li>
@@ -2574,8 +2761,8 @@
               <span class="pf-tag">Supabase</span>
             </div>
             <div class="pf-status">
-              <span class="pf-dot" style="background:var(--green)"></span>
-              <span style="color:var(--green)">案例研究</span>
+              <span class="pf-dot" style="background:var(--purple)"></span>
+              <span style="color:var(--purple)">展示项目</span>
               <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— 可提供演示</span>
             </div>
           </div>
@@ -2591,9 +2778,9 @@
               </div>
             </div>
             <h3>合规追踪器</h3>
-            <p class="pf-desc">初创企业的数字合规官——AI 智能体自动匹配法规、跟踪任务，无需全职团队即可保持合规评分健康。</p>
+            <p class="pf-desc">初创企业的数字合规官——自动匹配法规、跟踪任务，无需全职团队即可保持合规评分健康。</p>
             <ul class="pf-features">
-              <li>AI 智能体按管辖区自动匹配适用法规</li>
+              <li>按管辖区自动匹配适用法规</li>
               <li>带任务分配跟踪的任务管理</li>
               <li>带 KPI 指标与合规评分的仪表盘</li>
               <li>多租户 RBAC——随业务扩展</li>
@@ -2636,8 +2823,8 @@
               <span class="pf-tag">TypeScript</span>
             </div>
             <div class="pf-status">
-              <span class="pf-dot" style="background:var(--green)"></span>
-              <span style="color:var(--green)">案例研究</span>
+              <span class="pf-dot" style="background:var(--purple)"></span>
+              <span style="color:var(--purple)">展示项目</span>
               <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— 可提供演示</span>
             </div>
           </div>
@@ -2696,8 +2883,8 @@
               <span class="pf-tag">TypeScript</span>
             </div>
             <div class="pf-status">
-              <span class="pf-dot" style="background:var(--green)"></span>
-              <span style="color:var(--green)">案例研究</span>
+              <span class="pf-dot" style="background:var(--purple)"></span>
+              <span style="color:var(--purple)">展示项目</span>
               <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— 可提供演示</span>
             </div>
           </div>
@@ -2778,6 +2965,35 @@
           </button>
           <div class="faq-a">
             <p>可以。我们与 200 多个平台集成，包括 Salesforce、SAP、Microsoft 365、Google Workspace、Slack 等。只要您的工具有 API，我们就能连接。我们在您现有系统之上构建——无需推倒重来。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            你们能构建 AI 智能体来自动化我的业务任务吗？
+            <span class="faq-chevron">&#9662;</span>
+          </button>
+          <div class="faq-a">
+            <p>可以——这正是我们的专长。我们为您的业务定制 AI 智能体：全天候处理客户咨询、筛选潜在客户、预约排期、回答常见问题、处理文档等。每个智能体都根据您的具体服务、定价和工作流程进行训练。我们为法律、装修、美容健康等多个行业构建智能体——也可以为您的行业定制。预约免费探索电话，我们将为您评估可行方案。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            后台任务如电子表格、邮件和数据核对呢？
+            <span class="faq-chevron">&#9662;</span>
+          </button>
+          <div class="faq-a">
+            <p>这些正是可以完全消除或全面自动化的任务。以下是我们 AI 智能体可以处理的实际案例：</p>
+            <ul style="margin:12px 0;padding-left:20px;color:var(--text-2);line-height:1.8;">
+              <li><strong>发票核对</strong> — 供应商邮件发送发票 PDF → AI 读取、提取明细、与采购订单表格匹配、标记差异（数量错误、价格差异），自动更新追踪表。</li>
+              <li><strong>邮件自动转录</strong> — 客户订单邮件到达 → AI 提取产品、数量、交付日期和客户信息 → 填充 Google Sheet 或 Excel 跟踪表 → 发送自动确认邮件。</li>
+              <li><strong>每日销售报告</strong> — POS 系统每日导出数据 → AI 与库存核对、计算利润率、生成报告，每天早上 8 点发送至您的邮箱。</li>
+              <li><strong>应收账款跟进</strong> — AI 每日扫描应收账款表，识别逾期发票，在 30/60/90 天发送个性化催款邮件，收到付款后更新状态。</li>
+              <li><strong>供应商报价比较</strong> — 多家供应商通过邮件发送报价 → AI 从每份 PDF 中提取价格、交货条款和最小起订量 → 生成对比表并标注最优选项。</li>
+              <li><strong>HR 请假与报销处理</strong> — 员工通过邮件或 WhatsApp 提交请求 → AI 读取、核对假期余额、更新日历并发送审批通知——无需人工数据录入。</li>
+            </ul>
+            <p>如果您的团队正在做重复性数据工作，我们有很大把握可以自动化 80-100%。预约探索电话，带我们了解您的工作流程——我们会告诉您哪些可以自动化，投资回报率如何。</p>
           </div>
         </div>
       </div>
