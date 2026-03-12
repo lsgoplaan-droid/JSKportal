@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Portal — JSK AI</title>
+  <meta name="description" content="JSK AI Client Portal — exclusively for active clients." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --purple: #6366f1;
+      --green: #00e882;
+      --bg: #f7f7f0;
+      --bg-dark: #0b0b14;
+      --text: #0a0a12;
+      --text-2: #48485e;
+      --text-3: #9090aa;
+      --border: #e2e2ea;
+      --purple-soft: #ededfe;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --shadow-card: 0 2px 16px rgba(0,0,0,.06);
+      --shadow-hover: 0 8px 32px rgba(0,0,0,.10);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      line-height: 1.6;
+    }
+
+    .portal-wrapper {
+      width: 100%;
+      max-width: 520px;
+      text-align: center;
+    }
+
+    /* Logo */
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      margin-bottom: 40px;
+    }
+
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: .5px;
+    }
+
+    .logo-text {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .logo-text em {
+      font-style: normal;
+      color: var(--purple);
+    }
+
+    .logo-tagline {
+      font-size: 10.5px;
+      color: var(--text-3);
+      letter-spacing: .3px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* Card */
+    .portal-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 48px 40px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .portal-card h1 {
+      font-size: clamp(20px, 4vw, 24px);
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .portal-badge {
+      display: inline-block;
+      background: var(--purple-soft);
+      color: var(--purple);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+    }
+
+    .portal-card p {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-block;
+      background: var(--purple);
+      color: #fff;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 32px;
+      border: none;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      cursor: pointer;
+      transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn-primary:hover {
+      background: #5558e6;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, .3);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--text-3);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color .2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--purple);
+    }
+
+    /* Footer note */
+    .footer-note {
+      margin-top: 32px;
+      font-size: 12px;
+      color: var(--text-3);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .portal-card {
+        padding: 36px 24px;
+        border-radius: var(--radius-lg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="portal-wrapper">
+    <a href="https://jskai.ai" class="logo">
+      <div class="logo-mark">JSK</div>
+      <div>
+        <span class="logo-text">JSK <em>AI</em></span>
+        <div class="logo-tagline">Just ask</div>
+      </div>
+    </a>
+
+    <div class="portal-card">
+      <span class="portal-badge">Active Clients Only</span>
+      <h1>Client Portal</h1>
+      <p>Welcome to the JSK AI Client Portal. This area is exclusively for our active clients. Once you become a client, we'll personally guide you through setting up your access — including login credentials, dashboard walkthrough, and ongoing support.</p>
+      <a href="https://jskai.ai/#cta" class="btn-primary">Become a Client</a>
+      <br />
+      <a href="https://jskai.ai" class="back-link">&larr; Back to Home</a>
+    </div>
+
+    <p class="footer-note">&copy; 2026 JSK AI Automation &amp; Digital Solutions</p>
+  </div>
+
+</body>
+</html>

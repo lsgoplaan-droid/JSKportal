@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YG9V32YW06"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YG9V32YW06');
+  </script>
+
+  <title>Privacy Policy — JSK AI</title>
+  <meta name="description" content="Privacy Policy for JSK AI Automation & Digital Solutions. Learn how we collect, use, and protect your personal information." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#6366f1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────── */
+    :root {
+      --bg: #f7f7f0;
+      --bg-white: #ffffff;
+      --bg-dark: #0b0b14;
+      --bg-dark2: #13132a;
+      --text: #0a0a12;
+      --text-2: #48485e;
+      --text-3: #9090aa;
+      --border: #e2e2ea;
+      --purple: #6366f1;
+      --purple-soft: #ede9ff;
+      --green: #00e882;
+      --green-soft: #e0fff0;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --shadow-card: 0 4px 24px rgba(0, 0, 0, .06);
+    }
+
+    /* ─── RESET ──────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ─── HEADER ─────────────────────────────────────── */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247, 247, 240, .92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+    }
+
+    .header-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+    }
+
+    .logo-name {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .logo-name em {
+      font-style: normal;
+      color: var(--purple);
+    }
+
+    .logo-tagline {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--text-3);
+      letter-spacing: 0.3px;
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .back-link {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--purple);
+      transition: opacity .2s;
+    }
+
+    .back-link:hover {
+      opacity: .75;
+    }
+
+    /* ─── CONTENT ────────────────────────────────────── */
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 64px 32px 100px;
+    }
+
+    .page-title {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .page-updated {
+      font-size: 14px;
+      color: var(--text-3);
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-size: clamp(20px, 3vw, 24px);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-top: 8px;
+    }
+
+    .section p {
+      font-size: 15.5px;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .section ul {
+      list-style: none;
+      margin-bottom: 14px;
+      padding-left: 0;
+    }
+
+    .section ul li {
+      font-size: 15.5px;
+      color: var(--text-2);
+      line-height: 1.8;
+      padding-left: 24px;
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    .section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--purple);
+      opacity: .5;
+    }
+
+    .section a {
+      color: var(--purple);
+      font-weight: 500;
+      transition: opacity .2s;
+    }
+
+    .section a:hover {
+      opacity: .7;
+    }
+
+    .contact-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      box-shadow: var(--shadow-card);
+      margin-top: 8px;
+    }
+
+    .contact-card p {
+      margin-bottom: 8px;
+    }
+
+    .contact-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ─── FOOTER ─────────────────────────────────────── */
+    footer {
+      background: var(--bg-dark);
+      color: #fff;
+      padding: 48px 32px 40px;
+    }
+
+    .footer-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-copy {
+      font-size: 12.5px;
+      color: rgba(255, 255, 255, .4);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(255, 255, 255, .5);
+      transition: color .2s;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 600px) {
+      .header {
+        padding: 0 20px;
+      }
+
+      .content {
+        padding: 40px 20px 72px;
+      }
+
+      .page-title {
+        font-size: 28px;
+      }
+
+      .contact-card {
+        padding: 22px 20px;
+      }
+
+      footer {
+        padding: 36px 20px 32px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── HEADER ────────────────────────────────────── -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-mark">JSK</div>
+        <div>
+          <span class="logo-name">JSK <em>AI</em></span>
+          <div class="logo-tagline">Just ask</div>
+        </div>
+      </a>
+      <a href="index.html" class="back-link">&larr; Back to Home</a>
+    </div>
+  </header>
+
+  <!-- ─── CONTENT ───────────────────────────────────── -->
+  <main class="content">
+    <h1 class="page-title">Privacy Policy</h1>
+    <p class="page-updated">Last updated: March 2026</p>
+
+    <!-- 1. Introduction -->
+    <div class="section">
+      <h2>1. Introduction</h2>
+      <p>JSK AI Automation &amp; Digital Solutions ("we", "us", "our") operates the website <a href="https://jskai.ai">jskai.ai</a>. We respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains what information we collect, how we use it, and the choices you have regarding your data.</p>
+      <p>By using our website and services, you agree to the collection and use of information in accordance with this policy.</p>
+    </div>
+
+    <!-- 2. Information We Collect -->
+    <div class="section">
+      <h2>2. Information We Collect</h2>
+      <p>We may collect the following types of information when you interact with our website and services:</p>
+      <ul>
+        <li><strong>Contact information</strong> you voluntarily submit through our forms, including your name, email address, and phone number.</li>
+        <li><strong>Usage data</strong> collected automatically via Google Analytics 4 (GA4), such as pages visited, time spent on site, referral sources, device type, and general geographic location.</li>
+        <li><strong>Conversation data</strong> from interactions with our AI chatbot. This data is used solely to improve chatbot responses and service quality. It is not shared with third parties.</li>
+      </ul>
+    </div>
+
+    <!-- 3. How We Use Your Information -->
+    <div class="section">
+      <h2>3. How We Use Your Information</h2>
+      <p>We use the information we collect for the following purposes:</p>
+      <ul>
+        <li>To respond to your inquiries and provide the services you request.</li>
+        <li>To schedule consultations and meetings via Calendly.</li>
+        <li>To analyse and improve our website, content, and services.</li>
+        <li>To send you relevant updates and information about our services, only with your explicit consent.</li>
+      </ul>
+    </div>
+
+    <!-- 4. Third-Party Services -->
+    <div class="section">
+      <h2>4. Third-Party Services</h2>
+      <p>We use the following third-party services in the operation of our website:</p>
+      <ul>
+        <li><strong>Google Analytics 4</strong> — for website traffic analysis and understanding how visitors use our site. Google may collect anonymised data in accordance with their own privacy policy.</li>
+        <li><strong>Calendly</strong> — for appointment scheduling. When you book a call, your information is processed by Calendly under their privacy policy.</li>
+        <li><strong>WhatsApp</strong> — for direct communication via <a href="https://wa.me/6591802686">wa.me/6591802686</a>. Messages are subject to WhatsApp's privacy policy.</li>
+      </ul>
+      <p>We do not sell, trade, or rent your personal information to any third party.</p>
+    </div>
+
+    <!-- 5. Cookies -->
+    <div class="section">
+      <h2>5. Cookies</h2>
+      <p>Our website uses cookies to ensure proper functionality and to collect analytics data:</p>
+      <ul>
+        <li><strong>Essential cookies</strong> — required for basic website functionality.</li>
+        <li><strong>Analytics cookies</strong> — placed by Google Analytics 4 to help us understand how visitors interact with our site. These cookies collect information anonymously.</li>
+      </ul>
+      <p>You can control or disable cookies through your browser settings. Please note that disabling certain cookies may affect your experience on our website.</p>
+    </div>
+
+    <!-- 6. Data Security -->
+    <div class="section">
+      <h2>6. Data Security</h2>
+      <p>We implement reasonable technical and organisational measures to protect your personal information from unauthorised access, alteration, disclosure, or destruction. Our AI chatbot conversations are processed securely and are not stored permanently.</p>
+      <p>While we strive to use commercially acceptable means to protect your data, no method of transmission over the Internet or method of electronic storage is 100% secure. We cannot guarantee absolute security.</p>
+    </div>
+
+    <!-- 7. Your Rights -->
+    <div class="section">
+      <h2>7. Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Request access to the personal data we hold about you.</li>
+        <li>Request correction of any inaccurate or incomplete data.</li>
+        <li>Request deletion of your personal data from our records.</li>
+        <li>Withdraw consent for communications at any time.</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us using the details below.</p>
+    </div>
+
+    <!-- 8. Contact -->
+    <div class="section">
+      <h2>8. Contact Us</h2>
+      <p>If you have any questions or concerns about this Privacy Policy or how we handle your data, please reach out:</p>
+      <div class="contact-card">
+        <p><strong>Email:</strong> <a href="mailto:info@jskai.ai">info@jskai.ai</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/6591802686">+65 9180 2686</a></p>
+      </div>
+    </div>
+
+    <!-- 9. Changes -->
+    <div class="section">
+      <h2>9. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. Any changes will be posted on this page with an updated revision date.</p>
+      <p>We encourage you to review this page periodically to stay informed about how we protect your information. This policy was last updated in March 2026.</p>
+    </div>
+  </main>
+
+  <!-- ─── FOOTER ────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 JSK AI Automation and Digital Solutions. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#cta">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+
+</html>

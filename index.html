@@ -16,7 +16,7 @@
 
   <title>JSK AI Automation & Digital Solutions</title>
   <meta name="description"
-    content="JSK AI helps MSMEs harness agentic AI and intelligent automation. Free 30-min AI Discovery call. Website, WhatsApp CRM, AI chatbots, workflow automation — no tech team needed." />
+    content="JSK AI helps MSMEs harness agentic AI and intelligent automation. Free AI Discovery session — we identify automation opportunities so you can focus on your business." />
 
   <!-- Canonical & Language Alternates -->
   <link rel="canonical" href="https://jskai.ai/" />
@@ -28,7 +28,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://jskai.ai/" />
   <meta property="og:title" content="JSK AI — AI Automation & Digital Solutions for MSMEs" />
-  <meta property="og:description" content="AI agents are transforming MSMEs. Free 30-min AI Discovery call — we identify automation opportunities so you can focus on your business." />
+  <meta property="og:description" content="The next generation is leveraging AI agents. Free AI Discovery session — we identify automation opportunities so you can focus on your business." />
   <meta property="og:image" content="https://jskai.ai/og-image.svg" />
   <meta property="og:site_name" content="JSK AI" />
   <meta property="og:locale" content="en_US" />
@@ -37,7 +37,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="JSK AI — AI Automation & Digital Solutions for MSMEs" />
-  <meta name="twitter:description" content="AI agents are transforming MSMEs. Free 30-min AI Discovery call — we identify automation opportunities so you can focus on your business." />
+  <meta name="twitter:description" content="The next generation is leveraging AI agents. Free AI Discovery session — we identify automation opportunities so you can focus on your business." />
   <meta name="twitter:image" content="https://jskai.ai/og-image.svg" />
 
   <!-- Additional SEO -->
@@ -968,6 +968,105 @@
     }
 
 
+    /* ─── WHAT WE AUTOMATE ────────────────────────────── */
+    .automate-section {
+      padding: 100px 32px;
+      background: var(--bg-dark);
+    }
+
+    .automate-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .automate-card {
+      background: var(--bg-dark2);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      transition: transform .25s, border-color .25s;
+    }
+
+    .automate-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--purple);
+    }
+
+    .automate-card .ac-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    .automate-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .automate-card p {
+      font-size: 13px;
+      color: var(--text-3);
+      line-height: 1.7;
+    }
+
+    .automate-card .ac-flow {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    .automate-card .ac-step {
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 5px;
+      background: rgba(99,102,241,.12);
+      color: var(--purple);
+      white-space: nowrap;
+    }
+
+    .automate-card .ac-arrow {
+      font-size: 11px;
+      color: var(--text-3);
+    }
+
+    .automate-bottom {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .automate-bottom p {
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .automate-bottom span {
+      font-size: 14px;
+      color: var(--text-3);
+    }
+
+    @media (max-width: 1000px) {
+      .automate-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .automate-grid { grid-template-columns: 1fr; }
+      .automate-section { padding: 64px 16px; }
+    }
+
     /* ─── INDUSTRIES ──────────────────────────────────── */
     .industries {
       padding: 100px 32px;
@@ -1170,6 +1269,114 @@
       border-top: 1px solid var(--border);
       font-size: 12px;
       font-weight: 600;
+    }
+
+    .pf-demo-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      padding: 8px 18px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #fff;
+      background: var(--purple);
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+    }
+
+    .pf-demo-btn:hover {
+      background: #4f46e5;
+      transform: translateY(-1px);
+    }
+
+    .pf-demo-btn svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    /* Video Demo Modal */
+    .video-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0,0,0,.85);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .video-modal-overlay.active {
+      display: flex;
+    }
+
+    .video-modal {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      background: #000;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .video-modal-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+      padding: 4px 10px;
+      opacity: .8;
+      transition: opacity .2s;
+    }
+
+    .video-modal-close:hover {
+      opacity: 1;
+    }
+
+    .video-modal-body {
+      position: relative;
+      padding-top: 56.25%; /* 16:9 */
+    }
+
+    .video-modal-body iframe,
+    .video-modal-body video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      gap: 12px;
+      background: linear-gradient(135deg, #0b0b14, #13132a);
+    }
+
+    .video-placeholder svg {
+      width: 64px;
+      height: 64px;
+      opacity: .5;
+    }
+
+    .video-placeholder p {
+      font-size: 15px;
+      opacity: .6;
     }
 
     .pf-dot {
@@ -2246,8 +2453,8 @@
       </div>
     </a>
     <ul class="nav-links">
+      <li><a href="#automate">What We Automate</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#how">How It Works</a></li>
       <li><a href="#industries">Industries</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#demos">Demos</a></li>
@@ -2258,7 +2465,7 @@
     </ul>
     <div class="nav-actions">
       <a href="index-zh.html" class="btn btn-outline" style="font-size:13px;padding:8px 14px;">中文</a>
-      <a href="#" class="btn btn-outline" style="font-size:13px;padding:8px 18px;">Sign In</a>
+      <a href="signin.html" class="btn btn-outline" style="font-size:13px;padding:8px 18px;">Sign In</a>
       <a href="#cta" class="btn btn-dark" style="font-size:13px;padding:8px 18px;">Get Started →</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -2270,8 +2477,8 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
+    <a href="#automate" class="mobile-nav-link">What We Automate</a>
     <a href="#services" class="mobile-nav-link">Services</a>
-    <a href="#how" class="mobile-nav-link">How It Works</a>
     <a href="#industries" class="mobile-nav-link">Industries</a>
     <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
     <a href="#demos" class="mobile-nav-link">Demos</a>
@@ -2281,7 +2488,7 @@
     <a href="blog/" class="mobile-nav-link">Blog</a>
     <div class="mobile-cta">
       <a href="index-zh.html" class="btn btn-outline btn-lg">中文 Chinese</a>
-      <a href="#" class="btn btn-outline btn-lg">Sign In</a>
+      <a href="signin.html" class="btn btn-outline btn-lg">Sign In</a>
       <a href="#cta" class="btn btn-dark btn-lg">Get Started →</a>
     </div>
   </div>
@@ -2304,8 +2511,9 @@
     </p>
 
     <div class="hero-cta">
-      <a href="#cta" class="btn btn-green btn-lg">Book Free AI Discovery Call →</a>
+      <a href="#cta" class="btn btn-green btn-lg">Book Free AI Discovery Session →</a>
       <a href="#services" class="btn btn-outline btn-lg">See Our Solutions</a>
+      <button class="btn btn-outline btn-lg" onclick="openDemoVideo('chatbot')" style="cursor:pointer;border-color:var(--purple);color:var(--purple);">▶ Watch AI Chatbot Demo</button>
     </div>
 
     <!-- Floating cards -->
@@ -2432,7 +2640,118 @@
 
       <div class="demo-bottom reveal" style="text-align:center;margin-top:40px;">
         <p style="color:var(--text-2);font-size:15px;margin-bottom:16px;">Don't see your industry? We build custom AI agents for any business.</p>
-        <a href="#cta" class="btn btn-outline btn-lg">Book a Free AI Discovery Call &rarr;</a>
+        <a href="#cta" class="btn btn-outline btn-lg">Book a Free AI Discovery Session &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHAT WE AUTOMATE ════════════════════════════════ -->
+  <section class="automate-section" id="automate">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center;display:flex;flex-direction:column;align-items:center;">
+        <div class="section-tag" style="background:rgba(99,102,241,.15);color:var(--purple);">Real Examples</div>
+        <h2 class="section-title" style="color:#fff;">What our AI agents automate<br>for businesses like yours</h2>
+        <p class="section-sub" style="color:var(--text-3);">These aren't hypotheticals. These are the exact workflows we build for MSMEs — eliminating hours of repetitive data work every single week.</p>
+      </div>
+
+      <div class="automate-grid reveal">
+        <div class="automate-card">
+          <div class="ac-icon" style="background:var(--green-soft);">📄</div>
+          <h3>Invoice Reconciliation</h3>
+          <p>Supplier emails an invoice PDF — AI reads it, extracts line items, matches against your PO spreadsheet, flags mismatches, and updates your tracker automatically.</p>
+          <div class="ac-flow">
+            <span class="ac-step">Email arrives</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">AI extracts</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">Auto-matched</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">Tracker updated</span>
+          </div>
+        </div>
+
+        <div class="automate-card">
+          <div class="ac-icon" style="background:var(--purple-soft);">📧</div>
+          <h3>Email-to-Spreadsheet for Orders</h3>
+          <p>Customer orders arrive via email — AI extracts product, quantity, delivery date, and customer details — populates your tracker and sends an auto-acknowledgement.</p>
+          <div class="ac-flow">
+            <span class="ac-step">Order email</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">AI parses</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">Sheet filled</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">Ack sent</span>
+          </div>
+        </div>
+
+        <div class="automate-card">
+          <div class="ac-icon" style="background:var(--blue-soft);">📊</div>
+          <h3>Daily Sales Reporting</h3>
+          <p>Your POS exports data daily — AI reconciles against inventory, calculates margins, generates a summary report, and emails it to you by 8am every morning.</p>
+          <div class="ac-flow">
+            <span class="ac-step">POS export</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">AI reconciles</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">Report built</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">Emailed 8am</span>
+          </div>
+        </div>
+
+        <div class="automate-card">
+          <div class="ac-icon" style="background:var(--yellow-soft);">💰</div>
+          <h3>Accounts Receivable Follow-Up</h3>
+          <p>AI scans your receivables daily, identifies overdue invoices, sends personalised reminder emails at 30/60/90 days, and updates status when payment is received.</p>
+          <div class="ac-flow">
+            <span class="ac-step">Scan overdue</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">AI reminds</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">30/60/90 days</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">Auto-close</span>
+          </div>
+        </div>
+
+        <div class="automate-card">
+          <div class="ac-icon" style="background:var(--pink-soft);">📋</div>
+          <h3>Supplier Quote Comparison</h3>
+          <p>Quotes from multiple suppliers via email — AI extracts pricing, delivery terms, and MOQ from each PDF — builds a side-by-side comparison and highlights the best option.</p>
+          <div class="ac-flow">
+            <span class="ac-step">Quotes arrive</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">AI extracts</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">Compared</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">Best flagged</span>
+          </div>
+        </div>
+
+        <div class="automate-card">
+          <div class="ac-icon" style="background:var(--teal-soft);">🏖️</div>
+          <h3>HR Leave &amp; Expense Processing</h3>
+          <p>Staff submit requests via email or WhatsApp — AI reads them, checks leave balances, updates the calendar, and sends approval notifications — zero manual data entry.</p>
+          <div class="ac-flow">
+            <span class="ac-step">Request in</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">AI validates</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">Calendar updated</span>
+            <span class="ac-arrow">→</span>
+            <span class="ac-step">Approved</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="automate-bottom reveal">
+        <p>If your team does it manually and repeatedly — we can automate 80–100% of it.</p>
+        <span>Book a free AI Discovery session and walk us through your workflow.</span>
+        <div style="margin-top:20px;">
+          <a href="#cta" class="btn btn-green btn-lg">Show Us Your Workflow →</a>
+        </div>
       </div>
     </div>
   </section>
@@ -2442,26 +2761,26 @@
     <div class="container">
       <div class="section-header reveal">
         <div class="section-tag">Our Solutions</div>
-        <h2 class="section-title">AI-powered solutions<br>built for MSMEs</h2>
-        <p class="section-sub">Whether you're a solopreneur, a growing team, or a scaling enterprise—start with a
-          free AI Discovery call, then pick the tier that fits.</p>
+        <h2 class="section-title">The next generation is leveraging AI agents.<br>Is your business ready?</h2>
+        <p class="section-sub">We bring enterprise-grade AI automation to MSMEs — so you can focus on running your business
+          while AI agents handle the rest. Start with a free AI Discovery session, then pick the tier that fits.</p>
       </div>
 
       <div class="services-grid">
         <!-- TIER 0: AI Discovery — Free Consultation -->
         <div class="tier-card reveal" style="--tier-accent: #f59e0b; grid-column: 1 / -1;">
           <div class="tier-badge" style="background:var(--yellow-soft); color:#b45309;">AI Discovery</div>
-          <h3>Free 30-Minute AI Consultation</h3>
-          <p>Not sure where to start? Book a free, no-obligation discovery call. We'll assess your business, identify
-            the highest-impact opportunities to leverage agentic AI and automation, and map out a clear roadmap — so
-            you can make informed decisions with confidence.</p>
+          <h3>Free AI Readiness Consultation</h3>
+          <p>Your competitors are already leveraging AI agents. Are you ready? Book a free 30-minute strategy session — we'll
+            map your workflows, identify high-impact automation opportunities, and give you a clear roadmap to get started.
+            You focus on your business. We'll show you where AI can multiply your output.</p>
           <ul class="tier-list">
-            <li>30-minute 1-on-1 consultation with our AI strategist</li>
-            <li>Identify automation opportunities in your current workflows</li>
-            <li>Get a personalized AI readiness assessment</li>
-            <li>Receive a clear roadmap — no obligations, no hard sell</li>
+            <li>30-minute 1-on-1 strategy session with our AI consultant</li>
+            <li>Workflow audit — we identify what to automate first for maximum ROI</li>
+            <li>Personalized AI readiness scorecard for your business</li>
+            <li>Clear next-steps roadmap — no obligations, no hard sell</li>
           </ul>
-          <a href="#cta" class="tier-cta filled" style="background:#f59e0b; border-color:#f59e0b;">Book Free Discovery Call →</a>
+          <a href="#cta" class="tier-cta filled" style="background:#f59e0b; border-color:#f59e0b;">Book Your Free AI Discovery Session →</a>
         </div>
 
         <!-- TIER 1: Solo & Small Entrepreneurs -->
@@ -2504,43 +2823,6 @@
             <li>Digital Transformation — end-to-end consulting &amp; implementation</li>
           </ul>
           <a href="#cta" class="tier-cta outline">Let's Talk →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ HOW IT WORKS ════════════════════════════════════ -->
-  <section class="how" id="how">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-tag">How It Works</div>
-        <h2 class="section-title">From idea to automation<br>in three simple steps</h2>
-        <p class="section-sub">No PhD required. Just Ask — we make enterprise-grade AI automation accessible to every
-          MSME. From solopreneurs to growing teams, we help you scale through intelligent automation.</p>
-      </div>
-
-      <div class="steps">
-        <div class="step-cell reveal">
-          <div class="step-num">01</div>
-          <div class="step-ico">🔌</div>
-          <h3>Free AI Discovery Call</h3>
-          <p>Book your free 30-minute consultation. We'll map your workflows, spot automation opportunities, and
-            give you a clear roadmap — with zero obligations.
-        </div>
-        <div class="step-cell reveal">
-          <div class="step-num">02</div>
-          <div class="step-ico">⚙️</div>
-          <h3>Configure Your Workflows</h3>
-          <p>We will build a custom automation for you with your existing software stack, work with your users and
-            manage changes as you go.</p>
-        </div>
-        <div class="step-cell reveal">
-          <div class="step-num">03</div>
-          <div class="step-ico">🚀</div>
-          <h3>Launch &amp; Scale</h3>
-          <p>Monitor everything in real-time with Key Indicators and AI insights. Scale from 100 to 100k tasks per day
-            without
-            any infrastructure headaches or engineering team needed.</p>
         </div>
       </div>
     </div>
@@ -2656,14 +2938,6 @@
         <p class="section-sub">From AI agents that automate compliance to digital workers that streamline operations — explore our capabilities and what we can build for you.</p>
       </div>
 
-      <div class="pf-filter reveal">
-        <button class="pf-filter-btn active" data-filter="all">All</button>
-        <button class="pf-filter-btn" data-filter="ai-agent">AI Agents</button>
-        <button class="pf-filter-btn" data-filter="fintech">FinTech</button>
-        <button class="pf-filter-btn" data-filter="mobile">Mobile</button>
-        <button class="pf-filter-btn" data-filter="ai">AI / NLP</button>
-        <button class="pf-filter-btn" data-filter="web">Web</button>
-      </div>
 
       <div class="pf-grid">
         <!-- Card 1: LC Compliance Checker -->
@@ -2694,41 +2968,14 @@
               <span style="color:var(--purple)">Showcase</span>
               <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Demo available</span>
             </div>
+            <button class="pf-demo-btn" onclick="openDemoVideo('lc-checker')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Watch Demo
+            </button>
           </div>
         </div>
 
-        <!-- Card 2: Trading Opportunity Scanner -->
-        <div class="pf-card reveal" data-category="fintech web ai-agent">
-          <div class="pf-banner" style="background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div>
-          <div class="pf-body">
-            <div class="pf-top">
-              <div>
-                <span class="pf-badge" style="background:var(--purple-soft);color:var(--purple);">AI Agent &middot; Investment</span>
-              </div>
-            </div>
-            <h3>Trading Opportunity Scanner</h3>
-            <p class="pf-desc">AI agent designed to scan multi-asset markets 24/7 — a digital analyst that discovers trading opportunities, runs technical analysis, and backtests strategies.</p>
-            <ul class="pf-features">
-              <li>AI agent monitors markets and surfaces opportunities autonomously</li>
-              <li>Technical indicators: SMA, EMA, MACD, RSI, Bollinger Bands</li>
-              <li>Backtesting engine for strategy validation</li>
-              <li>Multi-asset: US equities, India NSE, options, FX</li>
-            </ul>
-            <div class="pf-tags">
-              <span class="pf-tag">AI Agent</span>
-              <span class="pf-tag">FastAPI</span>
-              <span class="pf-tag">React</span>
-              <span class="pf-tag">NumPy</span>
-            </div>
-            <div class="pf-status">
-              <span class="pf-dot" style="background:var(--purple)"></span>
-              <span style="color:var(--purple)">Proof of Concept</span>
-              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Architecture designed</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3: Shreyati Creations -->
+        <!-- Card 2: Shreyati Creations -->
         <div class="pf-card reveal" data-category="web">
           <div class="pf-banner" style="background:linear-gradient(90deg,#ec4899,#f59e0b)"></div>
           <div class="pf-body">
@@ -2788,38 +3035,7 @@
           </div>
         </div>
 
-        <!-- Card 5: Compliance Tracker -->
-        <div class="pf-card reveal" data-category="fintech web ai-agent">
-          <div class="pf-banner" style="background:linear-gradient(90deg,#2563eb,#059669)"></div>
-          <div class="pf-body">
-            <div class="pf-top">
-              <div>
-                <span class="pf-badge" style="background:var(--blue-soft);color:var(--blue);">AI Agent &middot; SaaS</span>
-              </div>
-            </div>
-            <h3>Compliance Tracker</h3>
-            <p class="pf-desc">Digital compliance officer for startups — auto-matches regulations, tracks tasks, and keeps your compliance score healthy without hiring a full-time team.</p>
-            <ul class="pf-features">
-              <li>Auto-matches applicable regulations by jurisdiction</li>
-              <li>Task management with assignment tracking</li>
-              <li>Dashboard with KPI metrics &amp; compliance score</li>
-              <li>Multi-tenant RBAC — scales with your business</li>
-            </ul>
-            <div class="pf-tags">
-              <span class="pf-tag">AI Agent</span>
-              <span class="pf-tag">React</span>
-              <span class="pf-tag">Prisma</span>
-              <span class="pf-tag">PostgreSQL</span>
-            </div>
-            <div class="pf-status">
-              <span class="pf-dot" style="background:var(--green)"></span>
-              <span style="color:var(--green)">Showcase</span>
-              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Demo available</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6: Kavya — Poetry Translator -->
+        <!-- Card 4: Kavya — Poetry Translator -->
         <div class="pf-card reveal" data-category="mobile ai">
           <div class="pf-banner" style="background:linear-gradient(90deg,#14b8a6,#6366f1)"></div>
           <div class="pf-body">
@@ -2850,63 +3066,12 @@
           </div>
         </div>
 
-        <!-- Card 7: KYC Partner Starter -->
-        <div class="pf-card reveal" data-category="mobile">
-          <div class="pf-banner" style="background:linear-gradient(90deg,#f59e0b,#ef4444)"></div>
-          <div class="pf-body">
-            <div class="pf-top">
-              <div>
-                <span class="pf-badge" style="background:var(--yellow-soft);color:#b45309;">Starter Kit</span>
-              </div>
-            </div>
-            <h3>KYC Partner Starter</h3>
-            <p class="pf-desc">Pre-configured Expo React Native project scaffold designed as a reusable foundation for building KYC partner verification apps.</p>
-            <ul class="pf-features">
-              <li>Production-ready Expo project structure</li>
-              <li>TypeScript strict mode configuration</li>
-              <li>Cross-platform: iOS, Android, Web</li>
-              <li>Ready for KYC feature integration</li>
-            </ul>
-            <div class="pf-tags">
-              <span class="pf-tag">Expo</span>
-              <span class="pf-tag">React Native</span>
-              <span class="pf-tag">TypeScript</span>
-            </div>
-            <div class="pf-status">
-              <span class="pf-dot" style="background:#f59e0b"></span>
-              <span style="color:#b45309">Starter Template</span>
-              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Reusable scaffold</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 8: DivyaDesam Explorer -->
-        <div class="pf-card reveal" data-category="mobile">
-          <div class="pf-banner" style="background:linear-gradient(90deg,#f59e0b,#ef4444)"></div>
-          <div class="pf-body">
-            <div class="pf-top">
-              <div>
-                <span class="pf-badge" style="background:var(--purple-soft);color:var(--purple);">Mobile App</span>
-              </div>
-            </div>
-            <h3>DivyaDesam Explorer</h3>
-            <p class="pf-desc">Cross-platform reference app cataloguing all 108 sacred Vishnu temples across South India with devotional verses, transliteration, and scholarly context.</p>
-            <ul class="pf-features">
-              <li>108 temples across 6 geographic regions</li>
-              <li>158 temple-verse combinations with Tamil &amp; English</li>
-              <li>12 Azhwar poet-saint biographies</li>
-              <li>Offline-first — all data embedded locally</li>
-            </ul>
-            <div class="pf-tags">
-              <span class="pf-tag">React Native</span>
-              <span class="pf-tag">Expo</span>
-              <span class="pf-tag">TypeScript</span>
-            </div>
-            <div class="pf-status">
-              <span class="pf-dot" style="background:var(--purple)"></span>
-              <span style="color:var(--purple)">Showcase</span>
-              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Demo available</span>
-            </div>
+        <!-- More Projects Note -->
+        <div class="pf-card reveal" data-category="all" style="display:flex;align-items:center;justify-content:center;text-align:center;min-height:220px;background:var(--bg-dark);border-color:rgba(255,255,255,.08);">
+          <div class="pf-body" style="padding:32px;">
+            <h3 style="color:#fff;margin-bottom:10px;">+ More Projects</h3>
+            <p class="pf-desc" style="color:var(--text-3);margin-bottom:16px;">Trading Opportunity Scanner, Compliance Tracker, DivyaDesam Explorer, and more — we're constantly building and shipping.</p>
+            <a href="#cta" class="pf-demo-btn" style="display:inline-flex;">Discuss Your Project →</a>
           </div>
         </div>
       </div>
@@ -3015,16 +3180,7 @@
             <span class="faq-chevron">&#9662;</span>
           </button>
           <div class="faq-a">
-            <p>Those are exactly the tasks that can either be completely eliminated or fully automated. Here are real examples of what our AI agents can handle:</p>
-            <ul style="margin:12px 0;padding-left:20px;color:var(--text-2);line-height:1.8;">
-              <li><strong>Invoice Reconciliation</strong> — Supplier emails an invoice PDF → AI reads it, extracts line items, matches against your Purchase Order spreadsheet, flags mismatches (wrong qty, price difference), and updates your tracker automatically.</li>
-              <li><strong>Email-to-Spreadsheet for Orders</strong> — Customer orders arrive via email → AI extracts product, qty, delivery date, and customer details → populates your Google Sheet or Excel tracker → sends an auto-acknowledgement email.</li>
-              <li><strong>Daily Sales Reporting</strong> — Your POS system exports data daily → AI reconciles it against inventory, calculates margins, generates a summary report, and emails it to you by 8am every morning.</li>
-              <li><strong>Accounts Receivable Follow-Up</strong> — AI scans your receivables spreadsheet daily, identifies overdue invoices, sends personalised reminder emails at 30/60/90 days, and updates the status when payment is received.</li>
-              <li><strong>Supplier Quote Comparison</strong> — You receive quotes from multiple suppliers via email → AI extracts pricing, delivery terms, and MOQ from each PDF → populates a side-by-side comparison sheet and highlights the best option.</li>
-              <li><strong>HR Leave &amp; Expense Processing</strong> — Staff submit requests via email or WhatsApp → AI reads them, checks leave balances, updates the calendar, and sends approval notifications — no manual data entry needed.</li>
-            </ul>
-            <p>If your team is doing repetitive data work today, there's a very good chance we can automate 80–100% of it. Book a discovery call and walk us through your workflow — we'll tell you exactly what can be automated and what the ROI looks like.</p>
+            <p>Those are exactly the tasks we specialise in automating — invoice reconciliation, order processing, sales reporting, accounts receivable follow-ups, supplier quote comparisons, HR leave processing, and more. If your team does it manually and repeatedly, we can automate 80–100% of it. <a href="#automate" style="color:var(--purple);font-weight:600;">See real examples →</a></p>
           </div>
         </div>
       </div>
@@ -3056,22 +3212,6 @@
         </div>
       </div>
 
-      <div class="founder-card reveal">
-        <div class="founder-avatar">GS</div>
-        <div class="founder-info">
-          <div class="founder-label">Founder & CEO</div>
-          <div class="founder-name">Gopalan Srinivasa</div>
-          <p class="founder-bio">Decades of hands-on experience in technology development, management, and governance
-            across banking and commodity trading organizations. Holds a Master's degree in Digital Technology, combining
-            deep domain expertise with a forward-looking vision for AI-powered business transformation.</p>
-          <div class="founder-tags">
-            <span class="founder-tag">Banking Technology</span>
-            <span class="founder-tag">Commodity Trading</span>
-            <span class="founder-tag">IT Governance</span>
-            <span class="founder-tag">Digital Transformation</span>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -3079,11 +3219,11 @@
   <section class="cta-section" id="cta">
     <div class="cta-box reveal">
       <div class="cta-glow"></div>
-      <h2>AI agents are transforming MSMEs.<br>Don't get left behind.</h2>
-      <p>Book your free 30-minute AI Discovery call. We'll identify the best opportunities to automate your
-        business — no tech team needed, no obligations.</p>
+      <h2>The next generation is leveraging AI agents.<br>Is your business ready?</h2>
+      <p>Book your free AI Discovery session. In 30 minutes, we'll identify the best opportunities to automate your
+        business — you keep focusing on what you do best. No tech team needed, no obligations.</p>
       <div class="cta-btns">
-        <a href="" onclick="gtag('event','calendly_click_event');Calendly.initPopupWidget({url: 'https://www.calendly.com/lsgoplaan'});return false;" class="btn btn-green btn-lg">Book Free AI Discovery Call →</a>
+        <a href="" onclick="gtag('event','calendly_click_event');Calendly.initPopupWidget({url: 'https://www.calendly.com/lsgoplaan'});return false;" class="btn btn-green btn-lg">Book Free AI Discovery Session →</a>
         <a href="mailto:hello@jskai.ai" class="btn btn-ghost-white btn-lg">Email Us Instead</a>
       </div>
     </div>
@@ -3124,18 +3264,16 @@
             <li><a href="#about">About Us</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="blog/">Blog</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#cta">Contact</a></li>
           </ul>
         </div>
 
         <div>
           <p class="footer-col-head">Resources</p>
           <ul class="footer-links">
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">API Reference</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
+            <li><a href="blog/">Blog &amp; Insights</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="signin.html">Client Portal</a></li>
           </ul>
         </div>
       </div>
@@ -3218,6 +3356,66 @@
       });
     });
   </script>
+  <!-- ═══ VIDEO DEMO MODAL ══════════════════════════════ -->
+  <div class="video-modal-overlay" id="videoModal">
+    <div class="video-modal">
+      <button class="video-modal-close" onclick="closeDemoVideo()">&times;</button>
+      <div class="video-modal-body" id="videoModalBody">
+        <!-- Video content injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const demoVideos = {
+      'lc-checker': {
+        // Replace with your YouTube embed URL or local video path
+        // youtube: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
+        // mp4: 'demos/lc-checker-demo.mp4',
+        title: 'LC Compliance Checker Demo'
+      },
+      'chatbot': {
+        // youtube: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
+        // mp4: 'demos/chatbot-demo.mp4',
+        title: 'AI Chatbot Demo'
+      }
+    };
+
+    function openDemoVideo(key) {
+      const modal = document.getElementById('videoModal');
+      const body = document.getElementById('videoModalBody');
+      const demo = demoVideos[key];
+      if (!demo) return;
+
+      if (demo.youtube) {
+        body.innerHTML = '<iframe src="' + demo.youtube + '?autoplay=1&rel=0" allowfullscreen allow="autoplay"></iframe>';
+      } else if (demo.mp4) {
+        body.innerHTML = '<video controls autoplay><source src="' + demo.mp4 + '" type="video/mp4"></video>';
+      } else {
+        body.innerHTML = '<div class="video-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg><p>Demo video coming soon — ' + demo.title + '</p></div>';
+      }
+
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDemoVideo() {
+      const modal = document.getElementById('videoModal');
+      const body = document.getElementById('videoModalBody');
+      modal.classList.remove('active');
+      body.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('videoModal').addEventListener('click', function(e) {
+      if (e.target === this) closeDemoVideo();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeDemoVideo();
+    });
+  </script>
+
   <!-- WhatsApp Floating Chat Button -->
   <!-- ═══ AI CHATBOT WIDGET ═══════════════════════════════ -->
   <style>
