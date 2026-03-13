@@ -979,7 +979,7 @@
 
     .why-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 2px;
       background: var(--border);
       border-radius: 20px;
@@ -1174,6 +1174,38 @@
     @media (max-width: 600px) {
       .results-grid { gap: 12px; }
       .result-card { min-width: 140px; max-width: 100%; flex: 1 1 140px; padding: 20px 16px; }
+    }
+
+    .no-jargon-banner {
+      margin-top: 48px;
+      padding: 36px 40px;
+      background: linear-gradient(135deg, var(--bg-dark), var(--bg-dark2));
+      border-radius: var(--radius-xl);
+      text-align: center;
+      border: 1px solid rgba(99,102,241,.2);
+    }
+
+    .no-jargon-banner p {
+      color: rgba(255,255,255,.8);
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0 auto 12px;
+    }
+
+    .no-jargon-banner strong {
+      color: var(--purple);
+    }
+
+    .no-jargon-banner em {
+      color: var(--green);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .no-jargon-banner { padding: 28px 20px; }
+      .no-jargon-banner p { font-size: 14px; }
     }
 
     /* ─── INDUSTRIES ──────────────────────────────────── */
@@ -3020,6 +3052,17 @@
           <p>Solopreneur or mid-size company — we tailor solutions to your scale and budget. Start small, grow without
             limits.</p>
         </div>
+        <div class="why-cell">
+          <div class="why-ico" style="background:var(--pink-soft)">🔇</div>
+          <h3>Zero Jargon. Just Results.</h3>
+          <p>Tired of hearing about LLMs, RAG, SLMs, and fine-tuning? We cut through the AI hype. You tell us the problem — we deliver a working solution in days, not decks.</p>
+        </div>
+      </div>
+
+      <div class="no-jargon-banner reveal">
+        <p>You've heard enough buzzwords. <strong>LLMs, RAG, SLMs, agents, fine-tuning</strong> — none of that matters to you. What matters is: <em>can someone take this repetitive task off my plate?</em></p>
+        <p>That's what we do. You describe the problem in plain English. We deliver a working solution — usually in days. No tech team needed. No 50-slide strategy decks. Just practical automation that saves you real hours every week.</p>
+        <a href="#cta" class="btn btn-green" style="margin-top:16px;">Let's Have a Chat →</a>
       </div>
     </div>
   </section>
