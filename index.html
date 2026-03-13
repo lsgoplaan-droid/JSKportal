@@ -1299,74 +1299,6 @@
       fill: currentColor;
     }
 
-    /* Video Demo Modal */
-    .video-modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      background: rgba(0,0,0,.85);
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-    }
-
-    .video-modal-overlay.active {
-      display: flex;
-    }
-
-    .video-modal {
-      position: relative;
-      width: 100%;
-      max-width: 900px;
-      background: #000;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-    }
-
-    .video-modal-close {
-      position: absolute;
-      top: -40px;
-      right: 0;
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 28px;
-      cursor: pointer;
-      padding: 4px 10px;
-      opacity: .8;
-      transition: opacity .2s;
-    }
-
-    .video-modal-close:hover {
-      opacity: 1;
-    }
-
-    .video-modal-body {
-      position: relative;
-      padding-top: 56.25%; /* 16:9 */
-    }
-
-    .video-modal-body iframe,
-    .video-modal-body video {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .video-placeholder {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      gap: 12px;
-      background: linear-gradient(135deg, #0b0b14, #13132a);
-    }
 
     .video-placeholder svg {
       width: 64px;
@@ -2965,12 +2897,7 @@
             <div class="pf-status">
               <span class="pf-dot" style="background:var(--purple)"></span>
               <span style="color:var(--purple)">Showcase</span>
-              <span style="color:var(--text-3);font-weight:400;margin-left:4px;">— Demo available</span>
             </div>
-            <button class="pf-demo-btn" onclick="openDemoVideo('lc-checker')">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              Watch Demo
-            </button>
           </div>
         </div>
 
@@ -3356,56 +3283,7 @@
     });
   </script>
   <!-- ═══ VIDEO DEMO MODAL ══════════════════════════════ -->
-  <div class="video-modal-overlay" id="videoModal">
-    <div class="video-modal">
-      <button class="video-modal-close" onclick="closeDemoVideo()">&times;</button>
-      <div class="video-modal-body" id="videoModalBody">
-        <!-- Video content injected by JS -->
-      </div>
-    </div>
-  </div>
-
   <script>
-    const demoVideos = {
-      'lc-checker': {
-        mp4: 'demos/LCCheckerDemo.mp4',
-        title: 'LC Compliance Checker Demo'
-      },
-      'chatbot': {
-        title: 'AI Chatbot Demo'
-      }
-    };
-
-    function openDemoVideo(key) {
-      const modal = document.getElementById('videoModal');
-      const body = document.getElementById('videoModalBody');
-      const demo = demoVideos[key];
-      if (!demo) return;
-
-      if (demo.youtube) {
-        body.innerHTML = '<iframe src="' + demo.youtube + '?autoplay=1&rel=0" allowfullscreen allow="autoplay"></iframe>';
-      } else if (demo.mp4) {
-        body.innerHTML = '<video controls autoplay><source src="' + demo.mp4 + '" type="video/mp4"></video>';
-      } else {
-        body.innerHTML = '<div class="video-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg><p>Demo video coming soon — ' + demo.title + '</p></div>';
-      }
-
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeDemoVideo() {
-      const modal = document.getElementById('videoModal');
-      const body = document.getElementById('videoModalBody');
-      modal.classList.remove('active');
-      body.innerHTML = '';
-      document.body.style.overflow = '';
-    }
-
-    document.getElementById('videoModal').addEventListener('click', function(e) {
-      if (e.target === this) closeDemoVideo();
-    });
-
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeDemoVideo();
     });
