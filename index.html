@@ -13,6 +13,19 @@
     gtag('js', new Date());
     gtag('config', 'G-YG9V32YW06');
   </script>
+  <!-- Google Ads conversion tracking - SUBMIT_LEAD_FORM -->
+  <script>
+    function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') { window.location = url; }
+      };
+      gtag('event', 'conversion_event_submit_lead_form_1', {
+        'event_callback': callback,
+        'event_timeout': 2000,
+      });
+      return false;
+    }
+  </script>
 
   <title>JSK AI Automation & Digital Solutions</title>
   <meta name="description"
@@ -3492,7 +3505,7 @@
       <p>Book your free AI Discovery session. In 30 minutes, we'll identify the best opportunities to automate your
         business — you keep focusing on what you do best. No tech team needed, no obligations.</p>
       <div class="cta-btns">
-        <a href="" onclick="gtag('event','calendly_click_event');Calendly.initPopupWidget({url: 'https://www.calendly.com/lsgoplaan'});return false;" class="btn btn-green btn-lg">Book Free AI Discovery Session →</a>
+        <a href="" onclick="gtag('event','calendly_click_event');gtag('event','conversion_event_submit_lead_form_1');Calendly.initPopupWidget({url: 'https://www.calendly.com/lsgoplaan'});return false;" class="btn btn-green btn-lg">Book Free AI Discovery Session →</a>
         <a href="mailto:hello@jskai.ai" class="btn btn-ghost-white btn-lg">Email Us Instead</a>
       </div>
       <div class="cta-guarantee">
@@ -4199,7 +4212,7 @@
               '<div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:6px;">' +
                 '<a href="mailto:hello@jskai.ai" style="display:inline-block;padding:5px 12px;background:var(--purple);color:#fff;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;">Email Us</a>' +
                 '<a href="https://wa.me/6591802686?text=Hi%20JSK%20AI!" target="_blank" rel="noopener" style="display:inline-block;padding:5px 12px;background:#25D366;color:#fff;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;">WhatsApp</a>' +
-                '<a href="#" onclick="gtag(\'event\',\'calendly_click_event\');Calendly.initPopupWidget({url:\'https://www.calendly.com/lsgoplaan\'});return false;" style="display:inline-block;padding:5px 12px;background:var(--bg-dark);color:#fff;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;">Book a Call</a>' +
+                '<a href="#" onclick="gtag(\'event\',\'calendly_click_event\');gtag(\'event\',\'conversion_event_submit_lead_form_1\');Calendly.initPopupWidget({url:\'https://www.calendly.com/lsgoplaan\'});return false;" style="display:inline-block;padding:5px 12px;background:var(--bg-dark);color:#fff;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;">Book a Call</a>' +
               '</div>' +
             '</div>' +
           '</div>';

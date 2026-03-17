@@ -13,6 +13,19 @@
     gtag('js', new Date());
     gtag('config', 'G-YG9V32YW06');
   </script>
+  <!-- Google Ads conversion tracking - SUBMIT_LEAD_FORM -->
+  <script>
+    function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') { window.location = url; }
+      };
+      gtag('event', 'conversion_event_submit_lead_form_1', {
+        'event_callback': callback,
+        'event_timeout': 2000,
+      });
+      return false;
+    }
+  </script>
 
   <title>JSK AI 智能自动化与数字化解决方案</title>
   <meta name="description"
@@ -3545,7 +3558,7 @@
       <h2>下一代正在利用AI代理。<br>您的企业准备好了吗？</h2>
       <p>预约免费 AI 发现会议。30 分钟内，我们将为您找到最佳自动化机会——您继续专注于您最擅长的事。无需技术团队，无任何义务。</p>
       <div class="cta-btns">
-        <a href="" onclick="gtag('event','calendly_click_event');Calendly.initPopupWidget({url: 'https://www.calendly.com/lsgoplaan'});return false;" class="btn btn-green btn-lg">预约免费 AI 发现会议 →</a>
+        <a href="" onclick="gtag('event','calendly_click_event');gtag('event','conversion_event_submit_lead_form_1');Calendly.initPopupWidget({url: 'https://www.calendly.com/lsgoplaan'});return false;" class="btn btn-green btn-lg">预约免费 AI 发现会议 →</a>
         <a href="mailto:hello@jskai.ai" class="btn btn-ghost-white btn-lg">发送邮件联系我们</a>
       </div>
       <div class="cta-guarantee">
@@ -4299,7 +4312,7 @@
               '<div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:6px;">' +
                 '<a href="mailto:hello@jskai.ai" style="display:inline-block;padding:5px 12px;background:var(--purple);color:#fff;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;">发送邮件</a>' +
                 '<a href="https://wa.me/6591802686?text=Hi%20JSK%20AI!" target="_blank" rel="noopener" style="display:inline-block;padding:5px 12px;background:#25D366;color:#fff;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;">WhatsApp</a>' +
-                '<a href="#" onclick="gtag(\'event\',\'calendly_click_event\');Calendly.initPopupWidget({url:\'https://www.calendly.com/lsgoplaan\'});return false;" style="display:inline-block;padding:5px 12px;background:var(--bg-dark);color:#fff;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;">预约通话</a>' +
+                '<a href="#" onclick="gtag(\'event\',\'calendly_click_event\');gtag(\'event\',\'conversion_event_submit_lead_form_1\');Calendly.initPopupWidget({url:\'https://www.calendly.com/lsgoplaan\'});return false;" style="display:inline-block;padding:5px 12px;background:var(--bg-dark);color:#fff;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;">预约通话</a>' +
               '</div>' +
             '</div>' +
           '</div>';
