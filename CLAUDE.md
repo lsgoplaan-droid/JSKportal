@@ -11,7 +11,7 @@ JSK AI Automation & Digital Solutions — a B2B AI automation and digital transf
 - **Pure vanilla HTML/CSS/JS** — no frameworks, no bundlers, no package manager
 - **Google Fonts** (Inter) loaded via CDN
 - **Calendly** widget (CSS + async JS from `assets.calendly.com`) for booking calls
-- **Python** (`python-docx`, `Pillow`) — for generating Word documents (resumes, cover letters, LinkedIn articles)
+- **Python** (`python-docx`, `Pillow`, `openpyxl`) — for generating Word documents (LinkedIn articles) and Excel prospect trackers
 - **No build step** — HTML files are served directly as static content
 
 ## Development
@@ -20,7 +20,7 @@ Open `index.html` in a browser. There is no dev server, build command, or test s
 
 **Deployment:** Netlify with custom domain `jskai.ai` (DNS via Netlify nameservers, domain registered on GoDaddy).
 
-**Python generators:** Run with `python generate_<name>.py` — requires `python-docx` and `Pillow` (`pip install python-docx Pillow`).
+**Python generators:** Run with `python generate_<name>.py` — requires `python-docx`, `Pillow`, and `openpyxl` (`pip install python-docx Pillow openpyxl`).
 
 ## Site Structure
 
@@ -91,6 +91,7 @@ Nav → Hero (with no-jargon messaging) → Logo Bar (tech logos) → What We Au
 - **WhatsApp** — floating button linking to `wa.me/6591802686`
 - **AI Chat API** — `https://jsk-ai-chatbot.onrender.com/api/chat` (production), `http://localhost:8000/api/chat` (development)
 - **Google Analytics** — GA4 tag `G-YG9V32YW06`
+- **Google Ads** — conversion tracking via `gtag('event', 'conversion_event_submit_lead_form_1', ...)` fires on Calendly button clicks
 
 ## Bilingual Site
 

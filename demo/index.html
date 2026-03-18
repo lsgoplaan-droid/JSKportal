@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSK Solutions - Demo Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 1px solid #1e293b;
+        }
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #f8fafc;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: #3b82f6;
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .card h2 {
+            font-size: 1.3rem;
+            color: #f1f5f9;
+            margin-bottom: 0.5rem;
+        }
+        .card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            flex: 1;
+            margin-bottom: 1.5rem;
+        }
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .tag {
+            background: #0f172a;
+            color: #64748b;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid #334155;
+        }
+        .card a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .card a:hover { color: #60a5fa; }
+        .card a svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.2s;
+        }
+        .card a:hover svg { transform: translateX(3px); }
+        .status {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+        }
+        .status-live { background: #064e3b; color: #34d399; }
+        .status-dev { background: #1e1b4b; color: #818cf8; }
+        .status-planned { background: #422006; color: #fbbf24; }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #475569;
+            font-size: 0.85rem;
+            border-top: 1px solid #1e293b;
+        }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.6rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JSK Solutions</h1>
+        <p>Proof-of-concept demos for trade finance, energy trading, and AI-powered automation</p>
+    </header>
+
+    <div class="grid">
+        <div class="card">
+            <span class="status status-live">Live</span>
+            <div class="card-icon">&#128203;</div>
+            <h2>LC Compliance Checker</h2>
+            <p>Upload a Letter of Credit and supporting trade documents (Invoice, Bill of Lading, Certificate of Origin, Packing List). The system extracts fields via OCR and checks compliance against UCP 600 rules.</p>
+            <div class="card-tags">
+                <span class="tag">OCR</span>
+                <span class="tag">UCP 600</span>
+                <span class="tag">Trade Finance</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">React</span>
+            </div>
+            <a href="https://lccheckerbyjsk.netlify.app/" target="_blank" rel="noopener">
+                Launch Demo
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+        </div>
+
+        <div class="card">
+            <span class="status status-live">Live</span>
+            <div class="card-icon">&#128231;</div>
+            <h2>Email-to-Deals Processor</h2>
+            <p>Parses incoming trade emails and automatically extracts deal details — counterparties, volumes, pricing, delivery terms — and populates a structured deal blotter for oil traders.</p>
+            <div class="card-tags">
+                <span class="tag">Email Parsing</span>
+                <span class="tag">Oil Trading</span>
+                <span class="tag">Deal Capture</span>
+                <span class="tag">AI/NLP</span>
+            </div>
+            <a href="https://oiltradersmall.netlify.app/deals" target="_blank" rel="noopener">
+                Launch Demo
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+        </div>
+
+        <div class="card">
+            <span class="status status-dev">In Development</span>
+            <div class="card-icon">&#127968;</div>
+            <h2>Real Estate Virtual Assistant</h2>
+            <p>AI-powered chatbot for real estate agencies. Handles property inquiries, schedules viewings, answers FAQs, and qualifies leads — available 24/7 with natural conversation flow.</p>
+            <div class="card-tags">
+                <span class="tag">AI Chatbot</span>
+                <span class="tag">Real Estate</span>
+                <span class="tag">Lead Qualification</span>
+                <span class="tag">Claude API</span>
+            </div>
+            <a href="#" style="color: #64748b; pointer-events: none;">
+                Coming Soon
+            </a>
+        </div>
+
+        <div class="card">
+            <span class="status status-planned">Planned</span>
+            <div class="card-icon">&#9981;</div>
+            <h2>Lightweight CTRM</h2>
+            <p>A streamlined Commodity Trading & Risk Management system for small-to-mid trading houses. Trade capture, position tracking, P&L, and basic risk metrics without enterprise complexity.</p>
+            <div class="card-tags">
+                <span class="tag">CTRM</span>
+                <span class="tag">Commodities</span>
+                <span class="tag">Risk Management</span>
+                <span class="tag">Position Tracking</span>
+            </div>
+            <a href="#" style="color: #64748b; pointer-events: none;">
+                Coming Soon
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 JSK Solutions. Built with purpose.
+    </footer>
+</body>
+</html>
