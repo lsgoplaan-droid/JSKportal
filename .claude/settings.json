@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.mage.ai)",
+      "Bash(git init)",
+      "Bash(git remote add origin https://github.com/lsgoplaan-droid/JSKportal.git)",
+      "Bash(git add index.html)",
+      "Bash(git commit:*)",
+      "Bash(git branch -M main)",
+      "Bash(git push -u origin main)",
+      "Bash(npx netlify-cli --version)",
+      "Bash(git config --list)",
+      "Bash(git add index.html CLAUDE.md)",
+      "Bash(git push)",
+      "WebFetch(domain:jskai.netlify.app)",
+      "Read(//d/Claude Projects/**)",
+      "Bash(pip install python-docx Pillow)",
+      "Bash(python generate_linkedin_doc.py)",
+      "Bash(python -c \":*)",
+      "Bash(nslookup jskai.ai)",
+      "Bash(curl -L \"https://1drv.ms/v/c/9d55a6b2b38e3443/IQC5EZYvHLtzQqvZ8-Wmc5DRAfUwa3wBQb0O7xZoPbefenc?e=CvnBDr&download=1\" -o \"d:/Claude Projects/JSK AIAutomation and Digital Solutions/demos/lc-checker-demo.mp4\" --max-time 120)",
+      "Bash(wc -c \"d:/Claude Projects/JSK AIAutomation and Digital Solutions/demos/lc-checker-demo.mp4\")",
+      "Bash(ipconfig /flushdns)",
+      "Bash(cmd.exe /c \"ipconfig /flushdns\")",
+      "Bash(nslookup jskai.ai 8.8.8.8)",
+      "Bash(nslookup -type=NS jskai.ai 8.8.8.8)",
+      "WebFetch(domain:otg-lab.com)",
+      "WebFetch(domain:theaiautomationagency.ai)",
+      "WebFetch(domain:avepoint.com)",
+      "WebFetch(domain:beam.ai)",
+      "WebFetch(domain:theintersect.ai)",
+      "WebFetch(domain:jskai.ai)",
+      "Bash(python generate_linkedin_company_article.py)",
+      "Bash(python generate_resume.py)",
+      "WebFetch(domain:www.linkedin.com)",
+      "Bash(python generate_searce_docs.py)",
+      "Bash(python generate_application_docs.py)",
+      "Bash(python generate_alten_docs.py)",
+      "WebSearch",
+      "Bash(python generate_prospect_tracker.py)"
+    ],
+    "additionalDirectories": [
+      "d:\\Claude Projects\\JSK AIAutomation and Digital Solutions"
+    ]
+  }
+}
